@@ -1,10 +1,12 @@
-package com.example.login;
+package com.example.user_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-class LoginApplicationTests {
+@ActiveProfiles("test")
+class UserServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

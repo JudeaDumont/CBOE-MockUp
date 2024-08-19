@@ -1,13 +1,12 @@
-package com.example.login;
+package com.example.user_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LoginApplication {
+public class UserServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LoginApplication.class, args);
+		SpringApplication.run(UserServiceApplication.class, args);
 	}
-
 }

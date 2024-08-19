@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>login</artifactId>
+	<artifactId>user-details-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>login</name>
-	<description>Login</description>
+	<name>user-details-service</name>
+	<description>user-service</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -43,6 +43,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
