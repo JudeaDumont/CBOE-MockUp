@@ -56,7 +56,7 @@ class AuthControllerIntegrationTest {
         String password = "password";
 
         // Act: Perform the login request
-        MvcResult mvcResult = mockMvc.perform(post("/login")
+        MvcResult mvcResult = mockMvc.perform(post("/api/user-details/login")
                 .contentType("application/json")
                 .content("{\"username\": \"" + username + "\", \"password\": \"" + password + "\"}"))
                 .andExpect(status().isOk())
