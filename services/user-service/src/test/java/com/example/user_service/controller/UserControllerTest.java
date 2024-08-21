@@ -1,25 +1,35 @@
 package com.example.user_service.controller;
 
+import com.example.user_service.client.UserDetailsClient;
 import com.example.user_service.model.User;
+import com.example.user_service.service.JwtTokenProvider;
 import com.example.user_service.service.UserService;
+import com.example.user_service.util.TestHelper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(UserController.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+@ActiveProfiles("test")
 class UserControllerTest {
 
     @Autowired
@@ -28,9 +38,31 @@ class UserControllerTest {
     @MockBean
     private UserService userService;
 
+    @Autowired
+    private JwtTokenProvider jwtTokenProvider;
+
+    @MockBean
+    private UserDetailsClient userDetailsClient;
+
+    private String adminToken;
+
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
+
+        // Mock the UserDetailsClient to return a UserDetails object with admin role
+        UserDetails adminUserDetails = org.springframework.security.core.userdetails.User
+                .withUsername("admin")
+                .password("password")
+                .roles("USERADMIN")
+                .build();
+
+        when(userDetailsClient.getUserDetailsByUsername("admin")).thenReturn(adminUserDetails);
+
+        // Create an Authentication object and generate the JWT token using the real JwtTokenProvider
+        Authentication authentication = new UsernamePasswordAuthenticationToken(
+                adminUserDetails, null, adminUserDetails.getAuthorities());
+        adminToken = TestHelper.generateAdminToken();
     }
 
     @Test
@@ -45,8 +77,9 @@ class UserControllerTest {
 
         // Act & Assert
         mockMvc.perform(post("/api/users")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"username\": \"tester\", \"email\": \"tester@example.com\", \"fullName\": \"Test User\"}"))
+                        .header("Authorization", "Bearer " + adminToken)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"username\": \"tester\", \"email\": \"tester@example.com\", \"fullName\": \"Test User\"}"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.username").value("tester"))
                 .andExpect(jsonPath("$.email").value("tester@example.com"))
@@ -66,7 +99,8 @@ class UserControllerTest {
         when(userService.findByUsername("tester")).thenReturn(Optional.of(user));
 
         // Act & Assert
-        mockMvc.perform(get("/api/users/tester"))
+        mockMvc.perform(get("/api/users/tester")
+                        .header("Authorization", "Bearer " + adminToken))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.username").value("tester"))
                 .andExpect(jsonPath("$.email").value("tester@example.com"))
@@ -81,7 +115,8 @@ class UserControllerTest {
         when(userService.findByUsername("nonexistent")).thenReturn(Optional.empty());
 
         // Act & Assert
-        mockMvc.perform(get("/api/users/nonexistent"))
+        mockMvc.perform(get("/api/users/nonexistent")
+                        .header("Authorization", "Bearer " + adminToken))
                 .andExpect(status().isNotFound());
 
         verify(userService, times(1)).findByUsername("nonexistent");
@@ -90,7 +125,8 @@ class UserControllerTest {
     @Test
     void testDeleteUser() throws Exception {
         // Act & Assert
-        mockMvc.perform(delete("/api/users/1"))
+        mockMvc.perform(delete("/api/users/1")
+                        .header("Authorization", "Bearer " + adminToken))
                 .andExpect(status().isNoContent());
 
         verify(userService, times(1)).deleteUser(1L);
