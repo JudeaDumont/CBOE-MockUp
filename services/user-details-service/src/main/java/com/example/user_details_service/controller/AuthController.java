@@ -44,6 +44,7 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Authentication failed");
         }
     }
+
     @PostMapping
     @PreAuthorize("hasRole('USERDETAILSADMIN')")
     public ResponseEntity<User> createUserDetails(@RequestBody User userDetails) {

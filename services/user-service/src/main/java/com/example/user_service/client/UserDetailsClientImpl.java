@@ -13,6 +13,9 @@ import java.util.Map;
 @Service
 public class UserDetailsClientImpl implements UserDetailsClient {
 
+    //todo: you almost certainly will have issues with authorization here
+    // there is no token being passed to the endpoint sit calls.
+
     private final RestTemplate restTemplate;
     private final String userDetailsServiceUrl;
 
