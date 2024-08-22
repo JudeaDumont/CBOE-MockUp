@@ -1,8 +1,6 @@
-/* src/styles.css */
-
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -10,46 +8,94 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: url('https://visitvatnajokull.is/wp-content/uploads/2018/03/IMG_8955.jpg'); /* Replace with the actual URL of the ice cave image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h2 {
-    color: #bb86fc;
+    color: #8ecae6;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 form {
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: rgba(34, 34, 59, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    width: 100%;
 }
 
 label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #8ecae6;
 }
 
 input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #333;
-    background-color: #2a2a2a;
-    color: #ffffff;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #2b2b52;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus {
+    background-color: #3a3a66;
+    outline: none;
+    border-color: #8ecae6;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #bb86fc;
-    color: #121212;
+    padding: 12px 24px;
+    background-color: #8ecae6;
+    color: #1a1a2e;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
 }
 
 button:hover {
-    background-color: #3700b3;
+    background-color: #219ebc;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #023047;
+    transform: translateY(0);
 }
 
 p {
-    color: #cf6679;
+    color: #ff4f4f;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: rgba(34, 34, 59, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    max-height: 80vh; /* Set a max height to prevent the card from occupying the full vertical space */
+    overflow-y: auto; /* Enable scrolling if the content exceeds the max height */
+    margin: 20px; /* Add margin to ensure the card doesn't stretch to the edges on smaller screens */
 }
