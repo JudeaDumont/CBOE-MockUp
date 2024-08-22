@@ -8,6 +8,7 @@ import com.example.user_details_service.service.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -44,18 +45,21 @@ public class AuthController {
         }
     }
     @PostMapping
+    @PreAuthorize("hasRole('USERDETAILSADMIN')")
     public ResponseEntity<User> createUserDetails(@RequestBody User userDetails) {
         User savedUserDetails = userDetailsService.saveUserDetails(userDetails);
         return ResponseEntity.ok(savedUserDetails);
     }
 
     @GetMapping("/{username}")
+    @PreAuthorize("hasRole('USERDETAILSADMIN')")
     public ResponseEntity<User> getUserDetailsByUsername(@PathVariable String username) {
         Optional<User> userDetails = userDetailsService.findByUsername(username);
         return userDetails.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('USERDETAILSADMIN')")
     public ResponseEntity<Void> deleteUserDetails(@PathVariable Long id) {
         userDetailsService.deleteUserDetails(id);
         return ResponseEntity.noContent().build();
