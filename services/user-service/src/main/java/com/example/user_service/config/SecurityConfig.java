@@ -1,6 +1,5 @@
 package com.example.user_service.config;
 
-import com.example.user_service.client.UserDetailsClient;
 import com.example.user_service.service.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -23,7 +22,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 
     private final JwtTokenProvider jwtTokenProvider;
-    private final UserDetailsClient userDetailsClient;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -39,7 +37,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         // Initialize the JwtTokenFilter
-        JwtTokenFilter jwtTokenFilter = new JwtTokenFilter(jwtTokenProvider, userDetailsClient);
+        JwtTokenFilter jwtTokenFilter = new JwtTokenFilter(jwtTokenProvider);
 
         http
                 .csrf(AbstractHttpConfigurer::disable)

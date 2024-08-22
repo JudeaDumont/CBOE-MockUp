@@ -1,6 +1,5 @@
 package com.example.user_service.controller;
 
-import com.example.user_service.client.UserDetailsClient;
 import com.example.user_service.model.User;
 import com.example.user_service.service.JwtTokenProvider;
 import com.example.user_service.service.UserService;
@@ -13,7 +12,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -39,24 +37,11 @@ class UserControllerForbiddenTests {
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
 
-    @MockBean
-    private UserDetailsClient userDetailsClient;
-
     private String userToken;
 
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-
-        // Mock the UserDetailsClient to return a UserDetails object with USER role
-        UserDetails userUserDetails = org.springframework.security.core.userdetails.User
-                .withUsername("user")
-                .password("password")
-                .roles("USER")
-                .build();
-
-        when(userDetailsClient.getUserDetailsByUsername("user")).thenReturn(userUserDetails);
-
         userToken = TestHelper.generateToken("user", "USER");
     }
 

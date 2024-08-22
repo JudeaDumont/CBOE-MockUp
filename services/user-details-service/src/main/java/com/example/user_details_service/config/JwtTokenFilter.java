@@ -1,6 +1,5 @@
 package com.example.user_details_service.config;
 
-import com.example.user_details_service.service.CustomUserDetailsService;
 import com.example.user_details_service.service.JwtTokenProvider;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
@@ -12,15 +11,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,7 +25,6 @@ import java.util.stream.Collectors;
 public class JwtTokenFilter extends OncePerRequestFilter {
 
     private final JwtTokenProvider jwtTokenProvider;
-    private final CustomUserDetailsService userDetailsService;
 
     @Override
     protected void doFilterInternal(@NonNull HttpServletRequest request,
@@ -44,27 +39,24 @@ public class JwtTokenFilter extends OncePerRequestFilter {
             List<String> tokenRoles = claims.get("roles", List.class);
 
             if (username != null && tokenRoles != null) {
-                // Retrieve UserDetails using the UserDetailsClient
-                UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+                // Convert roles from the token to authorities
+                List<SimpleGrantedAuthority> authorities = tokenRoles.stream()
+                        .map(role -> new SimpleGrantedAuthority("ROLE_" + role))
+                        .collect(Collectors.toList());
 
-                // Extract roles from UserDetails
-                List<String> userDetailsRoles = userDetails.getAuthorities().stream()
-                        .map(grantedAuthority -> grantedAuthority.getAuthority().substring(5))  // Removing "ROLE_" prefix
-                        .toList();
+                // Create a UserDetails object using information from the token
+                UserDetails userDetails = org.springframework.security.core.userdetails.User
+                        .withUsername(username)
+                        .password("") // No need for password, since we're not authenticating again
+                        .authorities(authorities)
+                        .build();
 
-                // Compare roles
-                if (new HashSet<>(userDetailsRoles).containsAll(tokenRoles) && new HashSet<>(tokenRoles).containsAll(userDetailsRoles)) {
-                    var authentication = new UsernamePasswordAuthenticationToken(
-                            userDetails, null, userDetails.getAuthorities());
-                    authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                // Set authentication in the security context
+                var authentication = new UsernamePasswordAuthenticationToken(
+                        userDetails, null, authorities);
+                authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 
-                    SecurityContextHolder.getContext().setAuthentication(authentication);
-                } else {
-                    // If roles don't match, access is denied
-                    SecurityContextHolder.clearContext();
-                    response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-                    return;
-                }
+                SecurityContextHolder.getContext().setAuthentication(authentication);
             }
         }
         filterChain.doFilter(request, response);

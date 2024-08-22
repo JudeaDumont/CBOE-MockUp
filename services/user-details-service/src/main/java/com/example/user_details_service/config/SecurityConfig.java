@@ -39,7 +39,7 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        JwtTokenFilter jwtTokenFilter = new JwtTokenFilter(jwtTokenProvider, userDetailsService);
+        JwtTokenFilter jwtTokenFilter = new JwtTokenFilter(jwtTokenProvider);
 
         http
                 .csrf(AbstractHttpConfigurer::disable)

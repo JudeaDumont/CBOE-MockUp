@@ -1,6 +1,5 @@
 package com.example.user_service.controller;
 
-import com.example.user_service.client.UserDetailsClient;
 import com.example.user_service.model.User;
 import com.example.user_service.service.JwtTokenProvider;
 import com.example.user_service.service.UserService;
@@ -41,27 +40,11 @@ class UserControllerTest {
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
 
-    @MockBean
-    private UserDetailsClient userDetailsClient;
-
     private String adminToken;
 
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-
-        // Mock the UserDetailsClient to return a UserDetails object with admin role
-        UserDetails adminUserDetails = org.springframework.security.core.userdetails.User
-                .withUsername("admin")
-                .password("password")
-                .roles("USERADMIN")
-                .build();
-
-        when(userDetailsClient.getUserDetailsByUsername("admin")).thenReturn(adminUserDetails);
-
-        // Create an Authentication object and generate the JWT token using the real JwtTokenProvider
-        Authentication authentication = new UsernamePasswordAuthenticationToken(
-                adminUserDetails, null, adminUserDetails.getAuthorities());
         adminToken = TestHelper.generateAdminToken();
     }
 
