@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import {jwtDecode, JwtPayload } from 'jwt-decode';
-import { useNavigate } from 'react-router-dom';
+import {jwtDecode, JwtPayload} from 'jwt-decode';
+import {useNavigate} from 'react-router-dom';
 
 interface User {
     username: string;
@@ -44,7 +44,7 @@ const Profile: React.FC = () => {
     }, [navigate]);
 
     if (error) {
-        return <p style={{ color: 'red' }}>{error}</p>;
+        return <p style={{color: 'red'}}>{error}</p>;
     }
 
     if (!user) {
@@ -52,11 +52,10 @@ const Profile: React.FC = () => {
     }
 
     return (
-        <div>
+        <div className={"card"}>
             <h2>User Profile</h2>
             <p><strong>Username:</strong> {user.username}</p>
             <p><strong>Email:</strong> {user.email}</p>
-            <p><strong>Full Name:</strong> {user.fullName}</p>
         </div>
     );
 };

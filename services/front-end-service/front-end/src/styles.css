@@ -81,7 +81,7 @@ button:active {
 }
 
 p {
-    color: #ff4f4f;
+    color: #8ecae6; /* Matching the light blue used in other elements */
     font-size: 14px;
     text-align: center;
     margin-top: 20px;
