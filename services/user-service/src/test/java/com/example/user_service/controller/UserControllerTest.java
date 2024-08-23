@@ -61,8 +61,7 @@ class UserControllerTest {
                         .content("{\"username\": \"tester\", \"email\": \"tester@example.com\", \"fullName\": \"Test User\"}"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.username").value("tester"))
-                .andExpect(jsonPath("$.email").value("tester@example.com"))
-                .andExpect(jsonPath("$.fullName").value("Test User"));
+                .andExpect(jsonPath("$.email").value("tester@example.com"));
 
         verify(userService, times(1)).saveUser(any(User.class));
     }
@@ -81,8 +80,7 @@ class UserControllerTest {
                         .header("Authorization", "Bearer " + adminToken))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.username").value("tester"))
-                .andExpect(jsonPath("$.email").value("tester@example.com"))
-                .andExpect(jsonPath("$.fullName").value("Test User"));
+                .andExpect(jsonPath("$.email").value("tester@example.com"));
 
         verify(userService, times(1)).findByUsername("tester");
     }

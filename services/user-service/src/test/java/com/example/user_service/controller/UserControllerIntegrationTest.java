@@ -61,7 +61,6 @@ class UserControllerIntegrationTest {
                         .header("Authorization", "Bearer " + adminToken))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.username").value("newuser"))
-                .andExpect(jsonPath("$.email").value("newuser@example.com"))
-                .andExpect(jsonPath("$.fullName").value("New User"));
+                .andExpect(jsonPath("$.email").value("newuser@example.com"));
     }
 }

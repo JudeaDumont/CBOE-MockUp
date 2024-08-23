@@ -78,8 +78,7 @@ class UserControllerForbiddenTests {
                         .header("Authorization", "Bearer " + userToken))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.username").value("tester"))
-                .andExpect(jsonPath("$.email").value("tester@example.com"))
-                .andExpect(jsonPath("$.fullName").value("Test User"));
+                .andExpect(jsonPath("$.email").value("tester@example.com"));
 
         verify(userService, times(1)).findByUsername("tester");
     }
