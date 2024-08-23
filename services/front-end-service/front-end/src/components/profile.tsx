@@ -28,10 +28,11 @@ const Profile: React.FC = () => {
 
         const fetchUserDetails = async () => {
             try {
-                const response = await axios.get<User>(`http://localhost:8080/api/users/${username}`, {
+                const response = await axios.get<User>(`http://localhost:8090/api/users/${username}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
+                    withCredentials: true,
                 });
                 setUser(response.data);
             } catch (err) {

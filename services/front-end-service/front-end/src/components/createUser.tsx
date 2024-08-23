@@ -16,7 +16,7 @@ const CreateUser: React.FC = () => {
             const loginRequest = {username, password};
 
             // Send the login request to the backend
-            const response = await fetch('http://localhost:8080/api/user-details/login', {
+            const response = await fetch('http://localhost:8080/api/user-details/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const CreateUser: React.FC = () => {
                 const data = await response.json();
 
                 // Store the JWT token in localStorage
-                localStorage.setItem('jwtToken', data.jwt);
+                localStorage.setItem('jwtToken', data.token);
 
                 // Redirect to the profile page or another secure page
                 navigate('/profile');

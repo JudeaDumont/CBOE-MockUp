@@ -20,6 +20,11 @@ public class AuthController {
     private final CustomUserDetailsService userDetailsService;
     private final AuthService authService;
 
+    @PostMapping("/register")
+    public ResponseEntity<?> registerUser(@RequestBody LoginRequest loginRequest) {
+        return authService.registerUser(loginRequest);
+    }
+
     @PostMapping("/login")
     public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest) {
         return authService.authenticateUser(loginRequest);

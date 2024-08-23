@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import React from 'react';
 import Login from './components/login';
 import Profile from './components/profile';
-import Landing from './components/landing';
 import CreateUser from "./components/createUser.tsx"; // This will be the new component for the landing page
 
 const App: React.FC = () => {
@@ -15,7 +14,7 @@ const App: React.FC = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/create-user" element={<CreateUser />} />
                 <Route path="/profile" element={token ? <Profile /> : <Navigate to="/" />} />
-                <Route path="/" element={token ? <Profile /> : <Landing />} />
+                <Route path="/" element={token ? <Profile /> : <Profile />} />
             </Routes>
         </Router>
     );
