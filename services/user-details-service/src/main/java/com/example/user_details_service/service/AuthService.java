@@ -2,7 +2,7 @@ package com.example.user_details_service.service;
 
 import com.example.user_details_service.model.JwtResponse;
 import com.example.user_details_service.model.LoginRequest;
-import com.example.user_details_service.model.User;
+import com.example.user_details_service.model.AuthUser;
 import com.example.user_details_service.security.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -27,13 +27,13 @@ public class AuthService {
 
     public ResponseEntity<?> registerUser(LoginRequest loginRequest) {
         // Check if the username already exists
-        Optional<User> existingUser = userDetailsService.findByUsername(loginRequest.getUsername());
+        Optional<AuthUser> existingUser = userDetailsService.findByUsername(loginRequest.getUsername());
         if (existingUser.isPresent()) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Username already exists");
         }
 
         // Create a new user
-        User newUser = new User();
+        AuthUser newUser = new AuthUser();
         newUser.setUsername(loginRequest.getUsername());
         newUser.setPassword(passwordEncoder.encode(loginRequest.getPassword()));
         newUser.setRole("USER"); // Set a default role

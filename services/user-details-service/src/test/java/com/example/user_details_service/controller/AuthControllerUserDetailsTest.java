@@ -1,6 +1,6 @@
 package com.example.user_details_service.controller;
 
-import com.example.user_details_service.model.User;
+import com.example.user_details_service.model.AuthUser;
 import com.example.user_details_service.service.CustomUserDetailsService;
 import com.example.user_details_service.util.TestHelper;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -59,12 +59,12 @@ class AuthControllerUserDetailsTest {
     @Test
     void createUserDetails_ShouldReturnCreatedUserDetails() throws Exception {
         // Arrange
-        User userDetails = new User();
+        AuthUser userDetails = new AuthUser();
         userDetails.setUsername("tester");
         userDetails.setPassword("password123");
         userDetails.setRole("USERADMIN");
 
-        when(userDetailsService.saveUserDetails(any(User.class))).thenReturn(userDetails);
+        when(userDetailsService.saveUserDetails(any(AuthUser.class))).thenReturn(userDetails);
 
         // Act & Assert
         mockMvc.perform(post("/api/user-details")
@@ -76,13 +76,13 @@ class AuthControllerUserDetailsTest {
                 .andExpect(jsonPath("$.password").value("password123"))
                 .andExpect(jsonPath("$.role").value("USERADMIN"));
 
-        verify(userDetailsService, times(1)).saveUserDetails(any(User.class));
+        verify(userDetailsService, times(1)).saveUserDetails(any(AuthUser.class));
     }
 
     @Test
     void getUserDetailsByUsername_ShouldReturnUserDetails_WhenUserExists() throws Exception {
         // Arrange
-        User userDetails = new User();
+        AuthUser userDetails = new AuthUser();
         userDetails.setUsername("tester");
         userDetails.setPassword("password123");
         userDetails.setRole("USER");

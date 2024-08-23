@@ -2,13 +2,15 @@ package com.example.user_service.model;
 
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "users") // Use a different table name
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id
@@ -16,5 +18,4 @@ public class User {
     private Long id;
     private String username;
     private String email;
-    private String fullName;
 }

@@ -1,6 +1,6 @@
 package com.example.user_details_service.service;
 
-import com.example.user_details_service.model.User;
+import com.example.user_details_service.model.AuthUser;
 import com.example.user_details_service.repo.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -30,7 +30,7 @@ class CustomUserDetailsServiceTest {
     @Test
     void loadUserByUsername_UserExists() {
         // Arrange
-        User user = new User();
+        AuthUser user = new AuthUser();
         user.setUsername("tester");
         user.setPassword("password");
         user.setRole("tester");

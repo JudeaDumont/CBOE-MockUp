@@ -2,7 +2,7 @@ package com.example.user_service.controller;
 
 
 import com.example.user_service.model.User;
-import com.example.user_service.service.JwtTokenProvider;
+import com.example.user_service.security.JwtTokenProvider;
 import com.example.user_service.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

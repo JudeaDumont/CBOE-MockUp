@@ -1,6 +1,6 @@
 package com.example.user_details_service.controller;
 
-import com.example.user_details_service.model.User;
+import com.example.user_details_service.model.AuthUser;
 import com.example.user_details_service.service.CustomUserDetailsService;
 import com.example.user_details_service.util.TestHelper;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -56,7 +56,7 @@ class AuthControllerUserDetailsForbiddenTest {
     @Test
     void createUserDetails_ShouldReturnForbidden_WhenRoleIsNotAdminDetails() throws Exception {
         // Arrange
-        User userDetails = new User();
+        AuthUser userDetails = new AuthUser();
         userDetails.setUsername("tester");
         userDetails.setPassword("password123");
         userDetails.setRole("USERADMIN");
@@ -68,7 +68,7 @@ class AuthControllerUserDetailsForbiddenTest {
                         .content(objectMapper.writeValueAsString(userDetails)))
                 .andExpect(status().isForbidden());
 
-        verify(userDetailsService, never()).saveUserDetails(any(User.class));
+        verify(userDetailsService, never()).saveUserDetails(any(AuthUser.class));
     }
 
     @Test

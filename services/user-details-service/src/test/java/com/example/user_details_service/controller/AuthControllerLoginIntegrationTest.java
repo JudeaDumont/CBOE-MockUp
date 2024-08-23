@@ -1,7 +1,7 @@
 package com.example.user_details_service.controller;
 
 import com.example.user_details_service.model.JwtResponse;
-import com.example.user_details_service.model.User;
+import com.example.user_details_service.model.AuthUser;
 import com.example.user_details_service.repo.UserRepository;
 import com.example.user_details_service.security.JwtTokenProvider;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -41,7 +41,7 @@ class AuthControllerLoginIntegrationTest {
         userRepository.deleteAll();
 
         // Create and save a test user
-        User user = new User();
+        AuthUser user = new AuthUser();
         user.setUsername("tester");
         user.setPassword(passwordEncoder.encode("password"));  // Encrypt the password
         user.setRole("USER");  // Set the role for the user

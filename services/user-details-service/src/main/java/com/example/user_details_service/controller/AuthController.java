@@ -1,7 +1,7 @@
 package com.example.user_details_service.controller;
 
 import com.example.user_details_service.model.LoginRequest;
-import com.example.user_details_service.model.User;
+import com.example.user_details_service.model.AuthUser;
 import com.example.user_details_service.service.AuthService;
 import com.example.user_details_service.service.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
@@ -32,15 +32,15 @@ public class AuthController {
 
     @PostMapping
     @PreAuthorize("hasRole('USERDETAILSADMIN')")
-    public ResponseEntity<User> createUserDetails(@RequestBody User userDetails) {
-        User savedUserDetails = userDetailsService.saveUserDetails(userDetails);
+    public ResponseEntity<AuthUser> createUserDetails(@RequestBody AuthUser userDetails) {
+        AuthUser savedUserDetails = userDetailsService.saveUserDetails(userDetails);
         return ResponseEntity.ok(savedUserDetails);
     }
 
     @GetMapping("/{username}")
     @PreAuthorize("hasRole('USERDETAILSADMIN')")
-    public ResponseEntity<User> getUserDetailsByUsername(@PathVariable String username) {
-        Optional<User> userDetails = userDetailsService.findByUsername(username);
+    public ResponseEntity<AuthUser> getUserDetailsByUsername(@PathVariable String username) {
+        Optional<AuthUser> userDetails = userDetailsService.findByUsername(username);
         return userDetails.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 

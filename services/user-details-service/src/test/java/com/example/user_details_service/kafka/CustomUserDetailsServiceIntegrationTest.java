@@ -1,5 +1,6 @@
 package com.example.user_details_service.kafka;
 
+import com.example.user_details_service.model.AuthUser;
 import com.example.user_details_service.model.User;
 import com.example.user_details_service.repo.UserRepository;
 import com.example.user_details_service.service.CustomUserDetailsService;
@@ -45,7 +46,7 @@ public class CustomUserDetailsServiceIntegrationTest {
     @Test
     public void whenSaveUserDetails_thenMessageSentToKafka() throws InterruptedException, JsonProcessingException {
         // Arrange
-        User user = new User();
+        AuthUser user = new AuthUser();
         user.setUsername("testuser");
         user.setPassword("password");
         user.setRole("USER");
@@ -62,7 +63,7 @@ public class CustomUserDetailsServiceIntegrationTest {
         assertThat(receivedUser).usingRecursiveComparison().isEqualTo(user);
 
         // Verify the user is saved in the repository
-        User savedUser = userRepository.findByUsername("testuser").orElse(null);
+        AuthUser savedUser = userRepository.findByUsername("testuser").orElse(null);
         assertThat(savedUser).isNotNull();
         assertThat(savedUser.getUsername()).isEqualTo("testuser");
     }

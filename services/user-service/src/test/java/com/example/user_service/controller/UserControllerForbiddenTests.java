@@ -1,7 +1,7 @@
 package com.example.user_service.controller;
 
 import com.example.user_service.model.User;
-import com.example.user_service.service.JwtTokenProvider;
+import com.example.user_service.security.JwtTokenProvider;
 import com.example.user_service.service.UserService;
 import com.example.user_service.util.TestHelper;
 import org.junit.jupiter.api.BeforeEach;
@@ -51,7 +51,6 @@ class UserControllerForbiddenTests {
         User user = new User();
         user.setUsername("tester");
         user.setEmail("tester@example.com");
-        user.setFullName("Test User");
 
         when(userService.saveUser(any(User.class))).thenReturn(user);
 
@@ -71,7 +70,6 @@ class UserControllerForbiddenTests {
         User user = new User();
         user.setUsername("tester");
         user.setEmail("tester@example.com");
-        user.setFullName("Test User");
 
         when(userService.findByUsername("tester")).thenReturn(Optional.of(user));
 

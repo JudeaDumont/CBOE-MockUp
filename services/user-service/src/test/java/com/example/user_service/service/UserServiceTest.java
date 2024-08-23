@@ -35,7 +35,6 @@ class UserServiceTest {
         User user = new User();
         user.setUsername("tester");
         user.setEmail("tester@example.com");
-        user.setFullName("Test User");
 
         // Act
         User savedUser = userService.saveUser(user);
@@ -44,7 +43,6 @@ class UserServiceTest {
         assertNotNull(savedUser);
         assertEquals("tester", savedUser.getUsername());
         assertEquals("tester@example.com", savedUser.getEmail());
-        assertEquals("Test User", savedUser.getFullName());
     }
 
     @Test
@@ -53,7 +51,6 @@ class UserServiceTest {
         User user = new User();
         user.setUsername("tester");
         user.setEmail("tester@example.com");
-        user.setFullName("Test User");
         userRepository.save(user);
 
         // Act
@@ -79,7 +76,6 @@ class UserServiceTest {
         User user = new User();
         user.setUsername("tester");
         user.setEmail("tester@example.com");
-        user.setFullName("Test User");
         User savedUser = userRepository.save(user);
 
         // Act

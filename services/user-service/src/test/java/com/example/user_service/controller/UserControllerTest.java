@@ -1,7 +1,7 @@
 package com.example.user_service.controller;
 
 import com.example.user_service.model.User;
-import com.example.user_service.service.JwtTokenProvider;
+import com.example.user_service.security.JwtTokenProvider;
 import com.example.user_service.service.UserService;
 import com.example.user_service.util.TestHelper;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,9 +12,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -54,7 +51,6 @@ class UserControllerTest {
         User user = new User();
         user.setUsername("tester");
         user.setEmail("tester@example.com");
-        user.setFullName("Test User");
 
         when(userService.saveUser(any(User.class))).thenReturn(user);
 
@@ -77,7 +73,6 @@ class UserControllerTest {
         User user = new User();
         user.setUsername("tester");
         user.setEmail("tester@example.com");
-        user.setFullName("Test User");
 
         when(userService.findByUsername("tester")).thenReturn(Optional.of(user));
 
