@@ -30,7 +30,7 @@ services:
     image: provectuslabs/kafka-ui:latest
     container_name: CBOE-kafka-ui
     ports:
-      - "8080:8080"
+      - "8070:8070"
     environment:
       KAFKA_CLUSTERS_0_NAME: CBOE-Kafka-Cluster
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: CBOE-kafka:9092
