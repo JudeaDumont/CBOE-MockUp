@@ -1,6 +1,5 @@
-package com.example.user_details_service.config;
+package com.example.user_details_service.security;
 
-import com.example.user_details_service.service.JwtTokenProvider;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

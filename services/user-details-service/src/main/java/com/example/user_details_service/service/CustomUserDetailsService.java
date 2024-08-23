@@ -15,6 +15,7 @@ import java.util.Optional;
 public class CustomUserDetailsService implements UserDetailsService {
 
     private final UserRepository userRepository;
+    private final KafkaProducerService kafkaProducerService;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -27,8 +28,11 @@ public class CustomUserDetailsService implements UserDetailsService {
             .roles(user.getRole()) // Simplified role handling
             .build();
     }
+
     public User saveUserDetails(User userDetails) {
-        return userRepository.save(userDetails);
+        User save = userRepository.save(userDetails);
+        kafkaProducerService.sendMessage("user-registration-topic", userDetails);
+        return save;
     }
 
     public Optional<User> findByUsername(String username) {

@@ -3,7 +3,7 @@ package com.example.user_details_service.controller;
 import com.example.user_details_service.model.JwtResponse;
 import com.example.user_details_service.model.User;
 import com.example.user_details_service.repo.UserRepository;
-import com.example.user_details_service.service.JwtTokenProvider;
+import com.example.user_details_service.security.JwtTokenProvider;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

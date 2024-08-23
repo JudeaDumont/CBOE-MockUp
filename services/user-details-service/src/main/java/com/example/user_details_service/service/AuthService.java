@@ -3,6 +3,7 @@ package com.example.user_details_service.service;
 import com.example.user_details_service.model.JwtResponse;
 import com.example.user_details_service.model.LoginRequest;
 import com.example.user_details_service.model.User;
+import com.example.user_details_service.security.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

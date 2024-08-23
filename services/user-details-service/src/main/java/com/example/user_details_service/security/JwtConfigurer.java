@@ -1,4 +1,4 @@
-package com.example.user_details_service.config;
+package com.example.user_details_service.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;

@@ -1,7 +1,6 @@
-package com.example.user_details_service.config;
+package com.example.user_details_service.security;
 
 import com.example.user_details_service.service.CustomUserDetailsService;
-import com.example.user_details_service.service.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
