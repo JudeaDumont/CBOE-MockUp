@@ -35,6 +35,7 @@ public class AuthService {
         // Create a new user
         AuthUser newUser = new AuthUser();
         newUser.setUsername(loginRequest.getUsername());
+        newUser.setEmail(loginRequest.getEmail());
         newUser.setPassword(passwordEncoder.encode(loginRequest.getPassword()));
         newUser.setRole("USER"); // Set a default role
 

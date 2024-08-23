@@ -13,7 +13,7 @@ const CreateUser: React.FC = () => {
 
         try {
             // Prepare the login request payload
-            const loginRequest = {username, password};
+            const loginRequest = {username, password, email};
 
             // Send the login request to the backend
             const response = await fetch('http://localhost:8080/api/user-details/register', {
