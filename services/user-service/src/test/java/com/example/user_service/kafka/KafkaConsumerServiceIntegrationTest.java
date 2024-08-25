@@ -3,6 +3,7 @@ package com.example.user_service.kafka;
 import com.example.user_service.model.User;
 import com.example.user_service.repo.UserRepository;
 import com.example.user_service.service.UserService;
+import com.example.user_service.util.KafkaTestUtils;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -19,6 +20,7 @@ import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 import org.springframework.kafka.test.context.EmbeddedKafka;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -30,10 +32,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-@EmbeddedKafka(partitions = 1, topics = {"user-registration-topic"}, brokerProperties = {"listeners=PLAINTEXT://localhost:9092", "port=9092"})
+@EmbeddedKafka(
+        partitions = 1,
+        topics = {"user-registration-topic"},
+        brokerProperties = {
+                "listeners=PLAINTEXT://localhost:9092",
+                "port=9092",
+                "log.dirs=C:\\KafkaTemp"
+        })
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @EnableKafka
 @ActiveProfiles("test")
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)  // Ensure context is cleaned after tests
 public class KafkaConsumerServiceIntegrationTest {
 
     private KafkaTemplate<String, User> kafkaTemplate;
@@ -45,7 +55,9 @@ public class KafkaConsumerServiceIntegrationTest {
     private UserService userService;
 
     @BeforeAll
-    void setup() {
+    void setup() throws InterruptedException {
+
+        KafkaTestUtils.waitForBroker("localhost:9092", 10, 1000);
         // Setup KafkaTemplate with JsonSerializer
         Map<String, Object> configProps = new HashMap<>();
         configProps.put("bootstrap.servers", "localhost:9092");
