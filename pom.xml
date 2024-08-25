@@ -12,6 +12,7 @@
     <modules>
         <module>services/user-service</module>
         <module>services/user-details-service</module>
+        <module>services/index-producer</module>
     </modules>
 
     <properties>
