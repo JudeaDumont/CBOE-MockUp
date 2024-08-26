@@ -125,3 +125,44 @@ p {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
+
+.index-button {
+    padding: 8px 16px;
+    background-color: #28a745; /* Green color for the index button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px; /* Space between the logout and index buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.index-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.index-container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(34, 34, 59, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.8);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.data-table td {
+    padding: 10px;
+    border: 1px solid #8ecae6;
+    color: #e0e0e0;
+    background-color: #2b2b52;
+    text-align: center;
+}

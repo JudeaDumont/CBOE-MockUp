@@ -48,6 +48,10 @@ const Profile: React.FC = () => {
         navigate('/'); // Redirect to landing page
     };
 
+    const handleIndexNavigation = () => {
+        navigate('/index'); // Navigate to the new "Index" component
+    };
+
     if (error) {
         return <p className="error">{error}</p>;
     }
@@ -60,8 +64,8 @@ const Profile: React.FC = () => {
         <div className="profile-container">
             <header className="profile-header">
                 <nav className="profile-nav">
-                    {/* Placeholder for other menu items */}
                     <button onClick={handleLogout} className="logout-button">Logout</button>
+                    <button onClick={handleIndexNavigation} className="index-button">Index</button>
                 </nav>
             </header>
             <div className="card">
