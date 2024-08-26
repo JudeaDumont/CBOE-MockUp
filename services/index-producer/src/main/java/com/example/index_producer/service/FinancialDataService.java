@@ -1,6 +1,7 @@
 package com.example.index_producer.service;
 
 import com.example.index_producer.model.FinancialData;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -9,10 +10,10 @@ import org.springframework.stereotype.Service;
 import java.util.Random;
 
 @Service
+@RequiredArgsConstructor
 public class FinancialDataService {
 
-    @Autowired
-    private KafkaTemplate<String, FinancialData> kafkaTemplate;
+    private final KafkaTemplate<String, FinancialData> kafkaTemplate;
 
     private static final String TOPIC = "financial_data";
     private Random random = new Random();
