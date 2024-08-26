@@ -3,6 +3,7 @@ package com.example.user_service.kafka;
 import com.example.user_service.model.User;
 import com.example.user_service.repo.UserRepository;
 import com.example.user_service.service.UserService;
+import com.example.user_service.util.KafkaTestUtils;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -45,7 +46,8 @@ public class KafkaConsumerServiceIntegrationTest {
     private UserService userService;
 
     @BeforeAll
-    void setup() {
+    void setup() throws InterruptedException {
+        KafkaTestUtils.waitForBroker("localhost:9092", 10, 1000);
         // Setup KafkaTemplate with JsonSerializer
         Map<String, Object> configProps = new HashMap<>();
         configProps.put("bootstrap.servers", "localhost:9092");
