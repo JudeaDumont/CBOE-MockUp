@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const Login: React.FC = () => {
     const [username, setUsername] = useState('');
@@ -12,7 +12,7 @@ const Login: React.FC = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8080/login', { username, password });
+            const response = await axios.post('http://localhost:8080/login', {username, password});
             const token = response.data.token;
 
             // Store the token in local storage
@@ -26,19 +26,19 @@ const Login: React.FC = () => {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
-            <form onSubmit={handleLogin}>
+        <div >
+            <form onSubmit={handleLogin}  className="card">
+                <h2>Login</h2>
                 <div>
                     <label>Username:</label>
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
+                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required/>
                 </div>
                 <div>
                     <label>Password:</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                 </div>
                 <button type="submit">Login</button>
-                {error && <p style={{ color: 'red' }}>{error}</p>}
+                {error && <p style={{color: 'red'}}>{error}</p>}
             </form>
         </div>
     );

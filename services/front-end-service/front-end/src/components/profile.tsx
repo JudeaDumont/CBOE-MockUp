@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {jwtDecode, JwtPayload} from 'jwt-decode';
-import {useNavigate} from 'react-router-dom';
+import {jwtDecode, JwtPayload } from 'jwt-decode';
+import { useNavigate } from 'react-router-dom';
 
 interface User {
     username: string;
@@ -43,8 +43,13 @@ const Profile: React.FC = () => {
         fetchUserDetails();
     }, [navigate]);
 
+    const handleLogout = () => {
+        localStorage.removeItem('jwtToken'); // Remove the token
+        navigate('/'); // Redirect to landing page
+    };
+
     if (error) {
-        return <p style={{color: 'red'}}>{error}</p>;
+        return <p className="error">{error}</p>;
     }
 
     if (!user) {
@@ -52,10 +57,18 @@ const Profile: React.FC = () => {
     }
 
     return (
-        <div className={"card"}>
-            <h2>User Profile</h2>
-            <p><strong>Username:</strong> {user.username}</p>
-            <p><strong>Email:</strong> {user.email}</p>
+        <div className="profile-container">
+            <header className="profile-header">
+                <nav className="profile-nav">
+                    {/* Placeholder for other menu items */}
+                    <button onClick={handleLogout} className="logout-button">Logout</button>
+                </nav>
+            </header>
+            <div className="card">
+                <h2>User Profile</h2>
+                <p><strong>Username:</strong> {user.username}</p>
+                <p><strong>Email:</strong> {user.email}</p>
+            </div>
         </div>
     );
 };
