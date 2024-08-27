@@ -18,7 +18,7 @@ public class FinancialDataService {
     private static final String TOPIC = "financial_data";
     private Random random = new Random();
 
-    @Scheduled(fixedRate = 1000) // Publish a message every second
+    @Scheduled(fixedRate = 1) // Publish a message every second
     public void publishData() {
         FinancialData data = new FinancialData();
         data.setIndexName("Index_" + random.nextInt(10));

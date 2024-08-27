@@ -9,8 +9,7 @@ import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 
-import static org.mockito.Mockito.atLeast;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -28,10 +27,11 @@ public class FinancialDataServiceSchedulingTest {
 
     @Test
     public void testScheduledPublishing() throws InterruptedException {
-        // Wait for 4 seconds to allow the scheduler to run
-        Thread.sleep(4000);
+        // Wait for 1 seconds to allow the scheduler to run
+        Thread.sleep(1000);
 
-        // Verify that the publishData method was called at least 4 times
-        verify(financialDataService, atLeast(4)).publishData();
+        // Verify that the publishData method was called at least 1000 times
+        verify(financialDataService, atLeast(1000)).publishData();
+        verify(financialDataService, atMost(1250)).publishData();
     }
 }
