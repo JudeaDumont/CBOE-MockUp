@@ -15,6 +15,7 @@
         <module>services/index-producer</module>
         <module>services/index-consumer</module>
         <module>experimental/EOSTest</module>
+        <module>experimental/postgres-test-container-with-kafka</module>
     </modules>
 
     <properties>

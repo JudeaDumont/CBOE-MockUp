@@ -16,7 +16,7 @@ const formatTimestamp = (timestamp: number): string => {
 };
 
 const Index: React.FC = () => {
-    const [data, setData] = useState<number[][]>(Array.from({length: 10}, () => Array(10).fill(0)));
+    const [data] = useState<number[][]>(Array.from({length: 10}, () => Array(10).fill(0)));
     const [indexTicker, setIndexTicker] = useState<IndexData>();
 
     useEffect(() => {
