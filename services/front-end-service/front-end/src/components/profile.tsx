@@ -37,6 +37,10 @@ const Profile: React.FC = () => {
                 setUser(response.data);
             } catch (err) {
                 setError('Failed to fetch user details: ' + err);
+                setTimeout(() => {
+                    localStorage.removeItem('jwtToken'); // Remove the token
+                    navigate('/');
+                }, 3000); // 3-second delay
             }
         };
 
