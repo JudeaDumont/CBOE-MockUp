@@ -1,0 +1,13 @@
+services:
+  experimental-service:
+    build: .
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    depends_on:
+      - CBOE-kafka
+    networks:
+      - CBOE-network
+
+networks:
+  CBOE-network:
+    external: true
