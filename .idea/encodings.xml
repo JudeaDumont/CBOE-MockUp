@@ -6,6 +6,10 @@
     <file url="file://$PROJECT_DIR$/experimental/kafka-test-producer-consumer/kafka-test-producer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kafka-test-producer-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kafka-test-producer-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kafka-test-producer-kstream-consumer/kafka-test-kstream-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kafka-test-producer-kstream-consumer/kafka-test-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kafka-test-producer-kstream-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kafka-test-producer-kstream-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kafka-test/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/postgres-test-container-with-kafka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/index-consumer/src/main/java" charset="UTF-8" />

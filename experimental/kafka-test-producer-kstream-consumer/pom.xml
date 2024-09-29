@@ -8,10 +8,15 @@
 		<version>3.3.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<packaging>pom</packaging>
+	<modules>
+		<module>kafka-test-producer</module>
+		<module>kafka-test-kstream-consumer</module>
+	</modules>
 	<groupId>com.example</groupId>
-	<artifactId>kafka-test-consumer</artifactId>
+	<artifactId>kafka-test-producer-kstream-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>kafka-test-consumer</name>
+	<name>kafka-test-producer-kstream-consumer</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -54,14 +59,6 @@
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-websocket</artifactId>
-        </dependency>
-		<dependency>
-			<groupId>org.apache.kafka</groupId>
-			<artifactId>kafka-streams</artifactId>
 		</dependency>
 	</dependencies>
 

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>kafka-test-consumer</artifactId>
+	<artifactId>kafka-test-kstream-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>kafka-test-consumer</name>
+	<name>kafka-test-kstream-consumer</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
