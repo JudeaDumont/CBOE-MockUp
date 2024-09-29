@@ -8,6 +8,7 @@
 		<version>3.3.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<packaging>pom</packaging>
 	<modules>
 		<module>kafka-test-producer</module>
 		<module>kafka-test-consumer</module>

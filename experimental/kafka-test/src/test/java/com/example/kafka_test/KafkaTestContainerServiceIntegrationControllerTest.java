@@ -24,17 +24,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class KafkaTestContainerServiceIntegrationControllerTest {
 
     @Autowired
-    private MockMvc mockMvc;  // MockMvc to simulate HTTP requests
+    private MockMvc mockMvc;
 
     private static KafkaContainer kafkaContainer;
 
     private CountDownLatch latch = new CountDownLatch(1);
 
     static {
-        // Initialize and start the Kafka container in the static block
         kafkaContainer = new KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:7.2.1"));
         kafkaContainer.start();
-        // Set the system property dynamically based on the started Kafka container
         System.setProperty("spring.kafka.bootstrap-servers", kafkaContainer.getBootstrapServers());
     }
 
