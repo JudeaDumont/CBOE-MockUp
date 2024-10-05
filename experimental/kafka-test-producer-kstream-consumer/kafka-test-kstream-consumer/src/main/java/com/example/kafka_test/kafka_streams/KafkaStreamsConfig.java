@@ -2,11 +2,16 @@ package com.example.kafka_test.kafka_streams;
 
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
+import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.kstream.KStream;
-import org.apache.kafka.streams.kstream.Materialized;
+import org.apache.kafka.streams.kstream.Named;
 import org.apache.kafka.streams.processor.WallclockTimestampExtractor;
+import org.apache.kafka.streams.state.KeyValueIterator;
+import org.apache.kafka.streams.state.QueryableStoreTypes;
+import org.apache.kafka.streams.state.ReadOnlyKeyValueStore;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,11 +19,15 @@ import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.annotation.EnableKafkaStreams;
 import org.springframework.kafka.annotation.KafkaStreamsDefaultConfiguration;
 import org.springframework.kafka.config.KafkaStreamsConfiguration;
+import org.springframework.kafka.config.StreamsBuilderFactoryBean;
 import org.springframework.kafka.config.StreamsBuilderFactoryBeanConfigurer;
+import org.springframework.kafka.streams.KafkaStreamsInteractiveQueryService;
+import org.springframework.kafka.streams.RecoveringDeserializationExceptionHandler;
 
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.IntStream;
 
 import static org.apache.kafka.streams.kstream.SlidingWindows.ofTimeDifferenceAndGrace;
@@ -28,19 +37,8 @@ import static org.apache.kafka.streams.kstream.SlidingWindows.ofTimeDifferenceAn
 @EnableKafkaStreams
 public class KafkaStreamsConfig {
 
-    @Value("${spring.kafka.bootstrap-servers}")
-    private String bootstrapServers;
-
-    @Bean(name = KafkaStreamsDefaultConfiguration.DEFAULT_STREAMS_CONFIG_BEAN_NAME)
-    public KafkaStreamsConfiguration kStreamsConfigs() {
-        Map<String, Object> props = new HashMap<>();
-        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "kafka-test");
-        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.Integer().getClass().getName());
-        props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
-        props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, WallclockTimestampExtractor.class.getName());
-        return new KafkaStreamsConfiguration(props);
-    }
+    @Autowired
+    StateStoreOperations stateStoreOperations;
 
     @Bean
     public StreamsBuilderFactoryBeanConfigurer configurer() {
@@ -69,11 +67,19 @@ public class KafkaStreamsConfig {
                 .windowedBy(ofTimeDifferenceAndGrace(Duration.ofSeconds(1), Duration.ofSeconds(1)))
                 .reduce((oldValue, newValue) -> {
                             System.out.println("Old Value: " + oldValue +
-                                    " New Value: " + newValue);
+                                    ", New Value: " + newValue);
+                            if (Objects.equals(newValue, "Test message 20")) {
+                                stateStoreOperations.queryStateStore("my-test-store");
+                            }
                             return oldValue + newValue;
                         },
-                        Materialized.as("my-sum-store"))
+                        Named.as("my-test-store"))
                 .toStream()
+                .map((s, s2) -> {
+                    System.out.println("New Key: " + s.key());
+                    System.out.println("New Value: " + s2);
+                    return new KeyValue<>(s.key(), s2);
+                })
                 .to("flush-topic");
 
         return stream;

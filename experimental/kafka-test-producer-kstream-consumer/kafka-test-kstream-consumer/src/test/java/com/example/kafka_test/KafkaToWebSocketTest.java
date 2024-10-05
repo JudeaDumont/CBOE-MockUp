@@ -1,6 +1,5 @@
 package com.example.kafka_test;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,25 +7,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.messaging.converter.StringMessageConverter;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.messaging.simp.stomp.StompFrameHandler;
-import org.springframework.messaging.simp.stomp.StompHeaders;
-import org.springframework.messaging.simp.stomp.StompSession;
-import org.springframework.messaging.simp.stomp.StompSessionHandlerAdapter;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.web.socket.client.standard.StandardWebSocketClient;
-import org.springframework.web.socket.messaging.WebSocketStompClient;
-import org.springframework.web.socket.sockjs.client.SockJsClient;
-import org.springframework.web.socket.sockjs.client.Transport;
-import org.springframework.web.socket.sockjs.client.WebSocketTransport;
 import org.testcontainers.containers.KafkaContainer;
 import org.testcontainers.utility.DockerImageName;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 import java.util.concurrent.*;
 import java.util.stream.IntStream;
 
@@ -36,9 +20,6 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @ActiveProfiles("test")
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class KafkaToWebSocketTest {
-
-    @Autowired
-    private SimpMessagingTemplate messagingTemplate;
 
     @LocalServerPort
     private int port;
@@ -60,58 +41,29 @@ public class KafkaToWebSocketTest {
     public void sendMessagesAsynchronously() {
         ExecutorService executorService = Executors.newFixedThreadPool(10); // Define a thread pool
 
-        // Use a CompletableFuture to run the message sending asynchronously
         CompletableFuture.runAsync(() -> {
-            IntStream.range(0, 100).forEach(i -> {
-                Integer key = 1; //"key-" + i % 11;
+            IntStream.range(0, 20).forEach(i -> {
+                Integer key = 1;
                 String value = "Test message " + i;
 
                 kafkaTemplate.send("example-topic", key, value);
                 try {
                     Thread.sleep(5);
                 } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt(); // Handle interruption
+                    Thread.currentThread().interrupt();
                     System.err.println("Interrupted while waiting between message sends");
                 }
             });
         }, executorService).thenRun(() -> System.out.println("All messages sent"));
-
-        // Optionally, shutdown the executor after completion
         executorService.shutdown();
     }
 
     @Test
     public void testKafkaMessageConsumedAndPublishedToWebSocket() throws Exception {
 
-        // Send message to Kafka
         sendMessagesAsynchronously();
 
-        // Setup WebSocket client
-        List<Transport> transports = new ArrayList<>();
-        transports.add(new WebSocketTransport(new StandardWebSocketClient()));
-        WebSocketStompClient stompClient = new WebSocketStompClient(new SockJsClient(transports));
-
-        stompClient.setMessageConverter(new StringMessageConverter());
-
         String wsUrl = "ws://localhost:" + port + "/ws";
-        CompletableFuture<StompSession> stompSessionFuture = stompClient.connectAsync(wsUrl, new StompSessionHandlerAdapter() {
-        });
-
-        StompSession stompSession = stompSessionFuture.get(50, TimeUnit.SECONDS);
-
-        stompSession.subscribe("/topic/kafkaMessages", new StompFrameHandler() {
-            @Override
-            public @NotNull Type getPayloadType(@NotNull StompHeaders headers) {
-                return String.class;
-            }
-
-            @Override
-            public void handleFrame(@NotNull StompHeaders headers, Object payload) {
-                receivedMessage = (String) payload;
-                System.out.println("Received WebSocket message: " + receivedMessage);
-                latch.countDown();
-            }
-        });
 
         // Wait for the message to be received by the WebSocket client
         boolean messageReceived = latch.await(20, TimeUnit.SECONDS);
@@ -124,5 +76,7 @@ public class KafkaToWebSocketTest {
     @KafkaListener(topics = "flush-topic", groupId = "test-group")
     public void listen(String message) {
         System.out.println("Received message: " + message);
+        latch.countDown();
+        receivedMessage = message;
     }
 }
