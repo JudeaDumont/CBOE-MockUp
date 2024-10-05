@@ -4,7 +4,8 @@ import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
-import org.apache.kafka.streams.kstream.*;
+import org.apache.kafka.streams.kstream.KStream;
+import org.apache.kafka.streams.kstream.Materialized;
 import org.apache.kafka.streams.processor.WallclockTimestampExtractor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -18,6 +19,7 @@ import org.springframework.kafka.config.StreamsBuilderFactoryBeanConfigurer;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 import static org.apache.kafka.streams.kstream.SlidingWindows.ofTimeDifferenceAndGrace;
 
@@ -46,12 +48,12 @@ public class KafkaStreamsConfig {
             fb.setStateListener((newState, oldState) -> {
                 System.out.println("State transition from " + oldState + " to " + newState);
                 if (newState == KafkaStreams.State.ERROR) {
-                    // Log custom error message
-                    System.err.println("Kafka Streams entered ERROR state. Please check logs.");
+                    IntStream.range(0, 100).forEach(i -> {
+                        System.err.println("Kafka Streams entered ERROR state. Please check logs.");
+                    });
                 }
             });
 
-            // Add an uncaught exception handler to log errors
             fb.setKafkaStreamsCustomizer(kafkaStreams -> kafkaStreams.setUncaughtExceptionHandler((t, e) -> {
                 System.err.println("Uncaught exception in Kafka Streams thread: " + t.getName());
                 e.printStackTrace();
