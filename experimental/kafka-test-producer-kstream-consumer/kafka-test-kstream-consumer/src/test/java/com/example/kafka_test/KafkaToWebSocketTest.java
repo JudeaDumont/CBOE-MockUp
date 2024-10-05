@@ -44,7 +44,7 @@ public class KafkaToWebSocketTest {
     private int port;
 
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaTemplate<Integer, String> kafkaTemplate;
 
     private static final KafkaContainer kafkaContainer;
 
@@ -62,9 +62,9 @@ public class KafkaToWebSocketTest {
 
         // Use a CompletableFuture to run the message sending asynchronously
         CompletableFuture.runAsync(() -> {
-            IntStream.range(0, 10000).forEach(i -> {
-                String key = "key-" + i % 9;
-                String value = UUID.randomUUID() + "Test message " + i;
+            IntStream.range(0, 100).forEach(i -> {
+                Integer key = 1; //"key-" + i % 11;
+                String value = "Test message " + i;
 
                 kafkaTemplate.send("example-topic", key, value);
                 try {
@@ -121,8 +121,8 @@ public class KafkaToWebSocketTest {
     }
 
 
-    @KafkaListener(topics = "example-topic", groupId = "test-group")
+    @KafkaListener(topics = "flush-topic", groupId = "test-group")
     public void listen(String message) {
-        //System.out.println("Received message: " + message);
+        System.out.println("Received message: " + message);
     }
 }

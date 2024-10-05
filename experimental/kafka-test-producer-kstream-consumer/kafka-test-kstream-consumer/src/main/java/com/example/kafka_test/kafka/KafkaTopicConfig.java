@@ -14,4 +14,12 @@ public class KafkaTopicConfig {
                 .replicas(1)
                 .build();
     }
+
+    @Bean
+    public NewTopic flushTopic() {
+        return TopicBuilder.name("flush-topic")
+                .partitions(1)
+                .replicas(1)
+                .build();
+    }
 }
