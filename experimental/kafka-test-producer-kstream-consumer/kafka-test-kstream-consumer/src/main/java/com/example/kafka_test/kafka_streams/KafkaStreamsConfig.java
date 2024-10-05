@@ -62,16 +62,6 @@ public class KafkaStreamsConfig {
     @Bean
     public KStream<Integer, String> kStream(StreamsBuilder kStreamBuilder) {
         KStream<Integer, String> stream = kStreamBuilder.stream("example-topic");
-
-//        stream.groupByKey()
-//                .reduce(
-//                        (oldValue, newValue) -> {
-//                            System.out.println("Old Value: " + oldValue +
-//                                    " New Value: " + newValue);
-//                            return oldValue + newValue;
-//                            },
-//                        Materialized.as("my-sum-store"));
-
         stream
                 .groupByKey()
                 .windowedBy(ofTimeDifferenceAndGrace(Duration.ofSeconds(1), Duration.ofSeconds(1)))
@@ -83,8 +73,6 @@ public class KafkaStreamsConfig {
                         Materialized.as("my-sum-store"))
                 .toStream()
                 .to("flush-topic");
-
-        //stream.print(Printed.toSysOut());
 
         return stream;
     }
