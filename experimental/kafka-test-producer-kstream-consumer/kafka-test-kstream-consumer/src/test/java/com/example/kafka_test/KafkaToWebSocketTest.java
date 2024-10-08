@@ -1,5 +1,7 @@
 package com.example.kafka_test;
 
+import com.example.kafka_test.kafka_streams.StateStoreOperations;
+import org.junit.ClassRule;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.test.rule.EmbeddedKafkaRule;
 import org.springframework.test.context.ActiveProfiles;
 import org.testcontainers.containers.KafkaContainer;
 import org.testcontainers.utility.DockerImageName;
@@ -27,16 +30,15 @@ public class KafkaToWebSocketTest {
     @Autowired
     private KafkaTemplate<Integer, String> kafkaTemplate;
 
-    private static final KafkaContainer kafkaContainer;
+    @Autowired
+    StateStoreOperations stateStoreOperations;
 
     private final CountDownLatch latch = new CountDownLatch(1);
     private String receivedMessage;
 
-    static {
-        kafkaContainer = new KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:7.2.1"));
-        kafkaContainer.start();
-        System.setProperty("spring.kafka.bootstrap-servers", kafkaContainer.getBootstrapServers());
-    }
+    @ClassRule
+    public static EmbeddedKafkaRule embeddedKafka = new EmbeddedKafkaRule(1, true, "example-topic");
+
 
     public void sendMessagesAsynchronously() {
         ExecutorService executorService = Executors.newFixedThreadPool(10); // Define a thread pool
@@ -54,7 +56,12 @@ public class KafkaToWebSocketTest {
                     System.err.println("Interrupted while waiting between message sends");
                 }
             });
-        }, executorService).thenRun(() -> System.out.println("All messages sent"));
+        }, executorService).thenRun(() -> {
+            System.out.println("All messages sent");
+            StateStoreOperations stateStoreOperations1 = stateStoreOperations;
+            stateStoreOperations1.queryStateStore("my-test-store");
+            int iasdf = 0;
+        });
         executorService.shutdown();
     }
 
