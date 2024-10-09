@@ -29,13 +29,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 
-/**
- * A basic topology that counts records by key and materialises the output into a new topic
- *
- * @author Nacho Munoz
- * @author Soby Chacko
- * @since 3.2.0
- */
 @Configuration
 @Component
 public class Topology {
@@ -58,7 +51,5 @@ public class Topology {
 				.suppress(Suppressed.untilTimeLimit(Duration.ofMillis(5), Suppressed.BufferConfig.unbounded()))
 				.toStream()
 				.to(outputTopic);
-
 	}
-
 }
