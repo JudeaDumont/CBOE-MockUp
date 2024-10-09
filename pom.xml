@@ -14,10 +14,7 @@
         <module>services/user-details-service</module>
         <module>services/index-producer</module>
         <module>services/index-consumer</module>
-        <module>experimental/EOSTest</module>
-        <module>experimental/kafka-test</module>
-        <module>experimental/kafka-test-producer-consumer</module>
-        <module>experimental/kafka-test-producer-kstream-consumer</module>
+        <module>experimental/kafka-kstream-topology-example</module>
     </modules>
 
     <properties>
