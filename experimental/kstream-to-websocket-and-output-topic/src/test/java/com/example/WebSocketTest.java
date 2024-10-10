@@ -1,14 +1,6 @@
 
 package com.example;
 
-import java.time.Duration;
-import java.util.List;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.TestInputTopic;
 import org.apache.kafka.streams.TestOutputTopic;
@@ -19,7 +11,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,6 +22,14 @@ import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.client.WebSocketConnectionManager;
 import org.springframework.web.socket.client.standard.StandardWebSocketClient;
 import org.springframework.web.socket.handler.AbstractWebSocketHandler;
+
+import java.time.Duration;
+import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class WebSocketTest {
@@ -47,7 +46,7 @@ public class WebSocketTest {
     @LocalServerPort
     private int port;
 
-    private TestInputTopic<Integer,String> inputTopic;
+    private TestInputTopic<Integer, String> inputTopic;
 
     private TestOutputTopic<Integer, Long> outputTopic;
 
@@ -80,7 +79,7 @@ public class WebSocketTest {
                 System.out.println("Websocket received: " + message.getPayload());
                 messageQueue.add(message.getPayload());
             }
-        }, "ws://localhost:"+port+"/ws/data");
+        }, "ws://localhost:" + port + "/ws/data");
 
 
         webSocketConnectionManager.setHeaders(new WebSocketHttpHeaders());
@@ -104,7 +103,7 @@ public class WebSocketTest {
     public void testTopologyLogic() throws InterruptedException {
 
         boolean await = webSocketReady.await(5, TimeUnit.SECONDS);
-        if(!await){
+        if (!await) {
             throw new RuntimeException("WebSocket 'Ready' timed out");
         }
 
