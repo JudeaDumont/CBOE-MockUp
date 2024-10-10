@@ -16,6 +16,8 @@
         <module>services/index-consumer</module>
         <module>experimental/kafka-kstream-topology-example</module>
         <module>experimental/kstream-to-websocket-and-output-topic</module>
+        <module>experimental/kstream-to-websocket-and-output-topic-separate</module>
+        <module>experimental/kstream-to-websocket</module>
     </modules>
 
     <properties>
