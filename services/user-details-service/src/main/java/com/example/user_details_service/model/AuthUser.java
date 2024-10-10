@@ -2,13 +2,15 @@ package com.example.user_details_service.model;
 
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "auth_user") // Renamed to avoid reserved keyword conflicts
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class AuthUser {
 
     @Id

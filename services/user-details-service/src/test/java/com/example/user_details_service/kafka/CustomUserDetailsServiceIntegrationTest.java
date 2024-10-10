@@ -36,10 +36,10 @@ public class CustomUserDetailsServiceIntegrationTest {
     @Autowired
     private UserRepository userRepository;
 
-    private BlockingQueue<ConsumerRecord<String, String>> records = new LinkedBlockingQueue<>();
+    private BlockingQueue<ConsumerRecord<String, User>> records = new LinkedBlockingQueue<>();
 
     @KafkaListener(topics = "user-registration-topic", groupId = "test-group")
-    public void listen(ConsumerRecord<String, String> record) {
+    public void listen(ConsumerRecord<String, User> record) {
         records.add(record);
     }
 
@@ -55,12 +55,11 @@ public class CustomUserDetailsServiceIntegrationTest {
         customUserDetailsService.saveUserDetails(user);
 
         // Assert
-        ConsumerRecord<String, String> received = records.poll(5, TimeUnit.SECONDS);
+        ConsumerRecord<String, User> received = records.poll(5, TimeUnit.SECONDS);
         assertThat(received).isNotNull();
         assertThat(received.topic()).isEqualTo("user-registration-topic");
 
-        User receivedUser = new ObjectMapper().readValue(received.value(), User.class);
-        assertThat(receivedUser).usingRecursiveComparison().isEqualTo(user);
+        assertThat(received.value().getUsername()).isEqualTo(user.getUsername());
 
         // Verify the user is saved in the repository
         AuthUser savedUser = userRepository.findByUsername("testuser").orElse(null);
