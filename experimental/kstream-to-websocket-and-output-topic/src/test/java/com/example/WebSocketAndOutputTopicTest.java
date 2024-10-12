@@ -32,8 +32,8 @@ import java.util.concurrent.TimeUnit;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class WebSocketTest {
-    private final Logger logger = LoggerFactory.getLogger(WebSocketTest.class);
+public class WebSocketAndOutputTopicTest {
+    private final Logger logger = LoggerFactory.getLogger(WebSocketAndOutputTopicTest.class);
 
     private TopologyTestDriver testDriver;
 

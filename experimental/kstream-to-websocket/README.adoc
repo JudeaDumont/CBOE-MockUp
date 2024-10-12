@@ -16,10 +16,10 @@ Console output describe the topology as shown below:
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.2)
 
-2021-06-30 17:38:33.637  INFO 92063 --- [           main] com.example.WebSocketTest             : Starting ApplicationTests using Java 11.0.10 on C02FL1KSMD6T with PID 92063 (started by igomez in /Users/igomez/Projects/spring-kafka/samples/sample-05)
-2021-06-30 17:38:33.638  INFO 92063 --- [           main] com.example.WebSocketTest             : The following profiles are active: test
-2021-06-30 17:38:35.027  INFO 92063 --- [           main] com.example.WebSocketTest             : Started ApplicationTests in 1.73 seconds (JVM running for 2.833)
-2021-06-30 17:38:35.695  INFO 92063 --- [           main] com.example.WebSocketTest             : Topologies:
+2021-06-30 17:38:33.637  INFO 92063 --- [           main] com.example.WebSocketAndOutputTopicTest             : Starting ApplicationTests using Java 11.0.10 on C02FL1KSMD6T with PID 92063 (started by igomez in /Users/igomez/Projects/spring-kafka/samples/sample-05)
+2021-06-30 17:38:33.638  INFO 92063 --- [           main] com.example.WebSocketAndOutputTopicTest             : The following profiles are active: test
+2021-06-30 17:38:35.027  INFO 92063 --- [           main] com.example.WebSocketAndOutputTopicTest             : Started ApplicationTests in 1.73 seconds (JVM running for 2.833)
+2021-06-30 17:38:35.695  INFO 92063 --- [           main] com.example.WebSocketAndOutputTopicTest             : Topologies:
    Sub-topology: 0
     Source: KSTREAM-SOURCE-0000000000 (topics: [input])
       --> KSTREAM-AGGREGATE-0000000002

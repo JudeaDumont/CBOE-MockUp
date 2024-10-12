@@ -18,6 +18,7 @@
         <module>experimental/kstream-to-websocket-and-output-topic</module>
         <module>experimental/kstream-to-websocket-and-output-topic-separate</module>
         <module>experimental/kstream-to-websocket</module>
+        <module>experimental/kstream-branching-output-topics</module>
     </modules>
 
     <properties>

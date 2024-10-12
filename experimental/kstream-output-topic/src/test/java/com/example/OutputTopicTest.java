@@ -23,8 +23,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.config.StreamsBuilderFactoryBean;
 
 @SpringBootTest
-public class ApplicationTests {
-	private final Logger logger = LoggerFactory.getLogger(ApplicationTests.class);
+public class OutputTopicTest {
+	private final Logger logger = LoggerFactory.getLogger(OutputTopicTest.class);
 
 	private TopologyTestDriver testDriver;
 
