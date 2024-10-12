@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>kafka-kstream-topology-example</artifactId>
+	<artifactId>kstream-output-topic</artifactId>
 	<version>3.2.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>kafka-kstream-topology-example</name>
+	<name>kstream-output-topic</name>
 	<description>Kafka Sample 6</description>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
