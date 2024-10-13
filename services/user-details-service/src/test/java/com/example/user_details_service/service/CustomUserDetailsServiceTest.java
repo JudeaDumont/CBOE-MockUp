@@ -1,12 +1,14 @@
 package com.example.user_details_service.service;
 
 import com.example.user_details_service.model.AuthUser;
+import com.example.user_details_service.model.User;
 import com.example.user_details_service.repo.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.util.Optional;
@@ -54,5 +56,10 @@ class CustomUserDetailsServiceTest {
         assertThrows(UsernameNotFoundException.class, () -> {
             customUserDetailsService.loadUserByUsername("nonexistentuser");
         });
+    }
+
+    @KafkaListener(topics = "user-registration-topic", groupId = "user-test-group")
+    public void consume(User user) {
+        System.out.println("Consumed message: " + user);
     }
 }
