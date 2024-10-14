@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Flat map duplicating messages example with explicit deserializer due to flat maps ability to change the key and val type">
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Flat map example was supposed to be a tri-split">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/main/java/com/example/Topology.java" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/test/java/com/example/OutputTopicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-branching-output-topics-suppressed/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-branching-output-topics/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-filter/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-inverse-filter/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-to-websocket-and-output-topic-separate/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-to-websocket-and-output-topic/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-to-websocket/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +46,9 @@
     &quot;accountId&quot;: &quot;46ace452-0e59-4bc0-9460-709201ba0505&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/kafka/spring-kafka/3.1.4/spring-kafka-3.1.4.jar!/org/springframework/kafka/annotation/KafkaStreamsDefaultConfiguration.class" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -53,6 +73,7 @@
     "JUnit.OutputTopicTest.executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic (1).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic (2).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (3).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic.executor": "Debug",
     "JUnit.SeparateWebSocketAndOutputTopicConfigTest.executor": "Debug",
     "JUnit.WebSocketAndOutputTopicTest.executor": "Debug",
@@ -89,7 +110,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (2)">
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (3)">
     <configuration name="OutputTopicTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-flat-map-tri-split" />
       <extension name="coverage">
@@ -152,8 +173,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-filter" />
+    <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-flat-map-value-only-tri-split" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -164,6 +185,13 @@
       <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
       <option name="METHOD_NAME" value="testTopologyLogic" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (10)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-flat-map-value-only-tri-split" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -268,11 +296,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
         <item itemvalue="JUnit.OutputTopicTest (1)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicTest" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
       </list>
     </recent_temporary>
   </component>
@@ -294,7 +322,7 @@
       <updated>1728758282986</updated>
       <workItem from="1728758284978" duration="7855000" />
       <workItem from="1728864182120" duration="195000" />
-      <workItem from="1728864405891" duration="5745000" />
+      <workItem from="1728864405891" duration="8568000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming a module (excruciating with .idea project directory hanging onto old module target)">
       <option name="closed" value="true" />
@@ -344,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728869470803</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Flat map example was supposed to be a tri-split">
+      <option name="closed" value="true" />
+      <created>1728930815902</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728930815902</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,6 +393,7 @@
     <MESSAGE value="KStream Filter Example" />
     <MESSAGE value="KStream Inverse Filter Example" />
     <MESSAGE value="Flat map duplicating messages example with explicit deserializer due to flat maps ability to change the key and val type" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flat map duplicating messages example with explicit deserializer due to flat maps ability to change the key and val type" />
+    <MESSAGE value="Flat map example was supposed to be a tri-split" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flat map example was supposed to be a tri-split" />
   </component>
 </project>
