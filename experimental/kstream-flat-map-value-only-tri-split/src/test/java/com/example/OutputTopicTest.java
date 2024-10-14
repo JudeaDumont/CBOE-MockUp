@@ -8,10 +8,7 @@ import java.util.Properties;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.apache.kafka.common.serialization.Serdes;
-import org.apache.kafka.streams.StreamsConfig;
-import org.apache.kafka.streams.TestInputTopic;
-import org.apache.kafka.streams.TestOutputTopic;
-import org.apache.kafka.streams.TopologyTestDriver;
+import org.apache.kafka.streams.*;
 import org.awaitility.Awaitility;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -70,9 +67,13 @@ public class OutputTopicTest {
 
 		Awaitility.waitAtMost(Duration.ofSeconds(5)).until(() -> outputTopic.getQueueSize() == 3L);
 
-		assertThat(outputTopic.readValuesToList()).isEqualTo(List.of("test1 test-a", "test1 test-b", "test1 test-c"));
-		assertThat(outputTopic.readKeyValuesToList().get(0).key).isEqualTo(1);
-		assertThat(outputTopic.readKeyValuesToList().get(1).key).isEqualTo(1);
-		assertThat(outputTopic.readKeyValuesToList().get(2).key).isEqualTo(1);
+
+		List<KeyValue<Integer, String>> keyValues = outputTopic.readKeyValuesToList();
+		assertThat(keyValues.get(0).key).isEqualTo(1);
+		assertThat(keyValues.get(1).key).isEqualTo(1);
+		assertThat(keyValues.get(2).key).isEqualTo(1);
+		assertThat(keyValues.get(0).value).isEqualTo("test1 test-a");
+		assertThat(keyValues.get(1).value).isEqualTo("test1 test-b");
+		assertThat(keyValues.get(2).value).isEqualTo("test1 test-c");
 	}
 }
