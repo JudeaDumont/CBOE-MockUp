@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="KStream Filter Example">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inverse-filter/README.adoc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inverse-filter/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inverse-filter/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inverse-filter/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inverse-filter/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inverse-filter/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inverse-filter/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inverse-filter/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="KStream Inverse Filter Example">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/README.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +60,7 @@
     "JUnit.OutputTopicTest (1).executor": "Debug",
     "JUnit.OutputTopicTest.executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic (1).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (2).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic.executor": "Debug",
     "JUnit.SeparateWebSocketAndOutputTopicConfigTest.executor": "Debug",
     "JUnit.WebSocketAndOutputTopicTest.executor": "Debug",
@@ -99,9 +97,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (1)">
-    <configuration name="BranchingTopicsSuppressedTests.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-branching-output-topics-suppressed" />
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (2)">
+    <configuration name="OutputTopicTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-flat-map-tri-split" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -109,9 +107,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.BranchingTopicsSuppressedTests" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,8 +144,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-filter" />
+    <configuration name="OutputTopicTest.testTopologyLogic (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-flat-map-tri-split" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -163,10 +160,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in kstream-branching-output-topics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-branching-output-topics" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/experimental/kstream-branching-output-topics/src/test/java" />
+    <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-filter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -227,6 +232,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (9)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-flat-map-tri-split" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-output-topic" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -264,11 +276,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
+        <item itemvalue="JUnit.OutputTopicTest (1)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicTest" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
-        <item itemvalue="JUnit.java in kstream-branching-output-topics" />
-        <item itemvalue="JUnit.BranchingTopicsSuppressedTests.testTopologyLogic" />
       </list>
     </recent_temporary>
   </component>
@@ -290,7 +302,7 @@
       <updated>1728758282986</updated>
       <workItem from="1728758284978" duration="7855000" />
       <workItem from="1728864182120" duration="195000" />
-      <workItem from="1728864405891" duration="306000" />
+      <workItem from="1728864405891" duration="2373000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming a module (excruciating with .idea project directory hanging onto old module target)">
       <option name="closed" value="true" />
@@ -324,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728864071693</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="KStream Inverse Filter Example">
+      <option name="closed" value="true" />
+      <created>1728864726230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728864726230</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +355,7 @@
     <MESSAGE value="Finished the branching example from apache kafka streams DSL. I have no idea how a stream is made up to be terminal or not. The use of supress and its impact to the single topic example and the branching topic example is a total mystery. Why does single require supress to emit results and the branching topics require its removal?" />
     <MESSAGE value="finished examples of both suppressed and non suppressed examples of branching output topics. &#10;&#10;the single output topic example will emit intermdeiate results if not suppressed. and the branching output topic will only emit results if you send a second batch of messages with an advanced timestamp." />
     <MESSAGE value="KStream Filter Example" />
-    <option name="LAST_COMMIT_MESSAGE" value="KStream Filter Example" />
+    <MESSAGE value="KStream Inverse Filter Example" />
+    <option name="LAST_COMMIT_MESSAGE" value="KStream Inverse Filter Example" />
   </component>
 </project>
