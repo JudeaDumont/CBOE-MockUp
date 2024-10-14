@@ -21,6 +21,7 @@
         <module>experimental/kstream-branching-output-topics</module>
         <module>experimental/kstream-output-topic-no-supress</module>
         <module>experimental/kstream-filter</module>
+        <module>experimental/kstream-inverse-filter</module>
         <module>experimental/kstream-branching-output-topics-suppressed</module>
     </modules>
 
