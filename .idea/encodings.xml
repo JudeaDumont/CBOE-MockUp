@@ -11,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket-and-output-topic-separate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket-and-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/index-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/index-producer/src/main/java" charset="UTF-8" />

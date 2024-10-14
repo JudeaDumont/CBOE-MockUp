@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Removed the readme docs since I do not really make any use of them, and instead I make use of a devlog kept in google docs that I may add later, though it includes much more overarching ideas liek infrastructure using terraform and GCP. &#10;&#10;Included is an example of using flatMapValues to branch 0 one or more records per record into a single topic without repartitioning data, which is a big deal for debuggability, maintainability, and performance, wince that may mean needing to create more partitions etc. Instead, since flatmapvalues only handles the values, the key comes in the same, and only more messages with different values are created and returned for further pipeline processing.">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/main/java/com/example/KafkaStreams/TopologyWebSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/main/java/com/example/WebSocket/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/main/java/com/example/WebSocket/WebSocketHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/test/java/com/example/WebSocketTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/test/java/com/example/OutputTopicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,24 +103,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (3)">
+  <component name="RunManager" selected="JUnit.WebSocketTest">
     <configuration name="OutputTopicTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-flat-map-tri-split" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-filter" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -171,8 +167,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebSocketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-to-websocket-with-terminal-foreach" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.WebSocketTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (10)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-flat-map-value-only-tri-split" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (11)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-to-websocket-with-terminal-foreach" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -278,11 +296,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebSocketTest" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
         <item itemvalue="JUnit.OutputTopicTest (1)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
-        <item itemvalue="JUnit.OutputTopicTest" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +322,7 @@
       <updated>1728758282986</updated>
       <workItem from="1728758284978" duration="7855000" />
       <workItem from="1728864182120" duration="195000" />
-      <workItem from="1728864405891" duration="8709000" />
+      <workItem from="1728864405891" duration="9393000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming a module (excruciating with .idea project directory hanging onto old module target)">
       <option name="closed" value="true" />
@@ -370,7 +388,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728935189740</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Removed the readme docs since I do not really make any use of them, and instead I make use of a devlog kept in google docs that I may add later, though it includes much more overarching ideas liek infrastructure using terraform and GCP. &#10;&#10;Included is an example of using flatMapValues to branch 0 one or more records per record into a single topic without repartitioning data, which is a big deal for debuggability, maintainability, and performance, wince that may mean needing to create more partitions etc. Instead, since flatmapvalues only handles the values, the key comes in the same, and only more messages with different values are created and returned for further pipeline processing.">
+      <option name="closed" value="true" />
+      <created>1728935342777</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728935342777</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

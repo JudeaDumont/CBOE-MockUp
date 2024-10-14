@@ -67,7 +67,6 @@ public class OutputTopicTest {
 
 		Awaitility.waitAtMost(Duration.ofSeconds(5)).until(() -> outputTopic.getQueueSize() == 3L);
 
-
 		List<KeyValue<Integer, String>> keyValues = outputTopic.readKeyValuesToList();
 		assertThat(keyValues.get(0).key).isEqualTo(1);
 		assertThat(keyValues.get(1).key).isEqualTo(1);
