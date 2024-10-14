@@ -68,7 +68,7 @@ public class OutputTopicTest {
 	public void testTopologyLogic() {
 		inputTopic.pipeInput(1, "test1", 1L);
 
-		Awaitility.waitAtMost(Duration.ofSeconds(5)).until(() -> outputTopic.getQueueSize() == 2L);
-		assertThat(outputTopic.readValuesToList()).isEqualTo(List.of("test1 test-a", "test1 test-b"));
+		Awaitility.waitAtMost(Duration.ofSeconds(5)).until(() -> outputTopic.getQueueSize() == 3L);
+		assertThat(outputTopic.readValuesToList()).isEqualTo(List.of("test1 test-a", "test1 test-b", "test1 test-c"));
 	}
 }

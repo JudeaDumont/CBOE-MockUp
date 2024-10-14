@@ -38,6 +38,7 @@ public class Topology {
 							List<KeyValue<Integer, String>> result = new LinkedList<>();
 							result.add(KeyValue.pair(key, value + " test-a"));
 							result.add(KeyValue.pair(key, value + " test-b"));
+							result.add(KeyValue.pair(key, value + " test-c"));
 							return result;
 						}
 				)
