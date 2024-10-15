@@ -30,6 +30,10 @@ public class Topology {
 	@Autowired
 	public void defaultTopology(final StreamsBuilder builder) {
 		builder.stream(inputTopic, Consumed.with(Serdes.Integer(), Serdes.String()))
+				.groupByKey()
+				.count()
+				.suppress(Suppressed.untilTimeLimit(Duration.ofMillis(5), Suppressed.BufferConfig.unbounded()))
+				.toStream()
 				.to(outputTopic);
 	}
 }

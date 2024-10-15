@@ -36,7 +36,7 @@ public class OutputTopicTest {
 
 	private TestInputTopic<Integer,String> inputTopic;
 
-	private TestOutputTopic<Integer, String> outputTopic;
+	private TestOutputTopic<Integer, Long> outputTopic;
 
 	@Autowired
 	private StreamsBuilderFactoryBean streamsBuilder;
@@ -46,7 +46,7 @@ public class OutputTopicTest {
 		this.testDriver = new TopologyTestDriver(streamsBuilder.getTopology(), streamsBuilder.getStreamsConfiguration());
 		logger.info(streamsBuilder.getTopology().describe().toString());
 		this.inputTopic = testDriver.createInputTopic(inputTopicName, Serdes.Integer().serializer(), Serdes.String().serializer());
-		this.outputTopic = testDriver.createOutputTopic(outputTopicName, Serdes.Integer().deserializer(), Serdes.String().deserializer());
+		this.outputTopic = testDriver.createOutputTopic(outputTopicName, Serdes.Integer().deserializer(), Serdes.Long().deserializer());
 	}
 
 	@AfterEach
@@ -58,11 +58,12 @@ public class OutputTopicTest {
 
 	@Test
 	public void testTopologyLogic() {
-		inputTopic.pipeInput(1, "test1", 1L);
-		inputTopic.pipeInput(1, "test2", 10L);
-		inputTopic.pipeInput(2, "test3", 2L);
+		inputTopic.pipeInput(1, "test", 1L);
+		inputTopic.pipeInput(1, "test", 10L);
+		inputTopic.pipeInput(2, "test", 2L);
 
-		Awaitility.waitAtMost(Duration.ofSeconds(5)).until(() -> outputTopic.getQueueSize() == 3L);
-		assertThat(outputTopic.readValuesToList()).isEqualTo(List.of("test1", "test2", "test3"));
+		Awaitility.waitAtMost(Duration.ofSeconds(5)).until(() -> outputTopic.getQueueSize() == 2L);
+		assertThat(outputTopic.readValuesToList()).isEqualTo(List.of(2L, 1L));
 	}
+
 }
