@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key.">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/src/main/java/com/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/src/main/java/com/example/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/src/main/java/com/example/Topology.java" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/src/main/resources/application-test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/src/test/java/com/example/OutputTopicNoSuppressTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/src/test/java/com/example/OutputTopicNoSuppressTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic/src/main/java/com/example/Topology.java" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-output-topic/src/main/java/com/example/Topology.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +61,19 @@
     "JUnit.SeparateWebSocketAndOutputTopicConfigTest.executor": "Debug",
     "JUnit.WebSocketAndOutputTopicTest.executor": "Debug",
     "JUnit.WebSocketTest.executor": "Debug",
+    "JUnit.java in kstream-branching-output-topics-suppressed.executor": "Debug",
     "JUnit.java in kstream-branching-output-topics.executor": "Debug",
+    "JUnit.java in kstream-filter.executor": "Debug",
+    "JUnit.java in kstream-flat-map-tri-split.executor": "Debug",
+    "JUnit.java in kstream-flat-map-value-only-tri-split.executor": "Debug",
+    "JUnit.java in kstream-inverse-filter.executor": "Debug",
+    "JUnit.java in kstream-output-topic-grouped-by-key-no-supress.executor": "Debug",
+    "JUnit.java in kstream-output-topic-grouped-by-key.executor": "Debug",
+    "JUnit.java in kstream-output-topic.executor": "Debug",
+    "JUnit.java in kstream-to-websocket-and-output-topic-separate.executor": "Debug",
+    "JUnit.java in kstream-to-websocket-and-output-topic.executor": "Debug",
+    "JUnit.java in kstream-to-websocket-with-terminal-foreach.executor": "Debug",
+    "JUnit.java in kstream-to-websocket.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -101,81 +105,43 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicNoSuppressTest.testTopologyLogic">
-    <configuration name="OutputTopicNoSuppressTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-output-topic-no-supress" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicNoSuppressTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager" selected="JUnit.java in kstream-to-websocket-with-terminal-foreach">
+    <configuration name="java in kstream-output-topic-grouped-by-key-no-supress" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-output-topic-grouped-by-key-no-supress" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-output-topic-grouped-by-key" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="java in kstream-to-websocket-and-output-topic-separate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-to-websocket-and-output-topic-separate" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/experimental/kstream-to-websocket-and-output-topic-separate/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-flat-map-value-only-tri-split" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="java in kstream-to-websocket-and-output-topic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-to-websocket-and-output-topic" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/experimental/kstream-to-websocket-and-output-topic/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-output-topic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebSocketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="java in kstream-to-websocket-with-terminal-foreach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-to-websocket-with-terminal-foreach" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.WebSocketTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in kstream-to-websocket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-to-websocket" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/experimental/kstream-to-websocket/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -308,11 +274,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OutputTopicNoSuppressTest.testTopologyLogic" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
-        <item itemvalue="JUnit.OutputTopicTest" />
-        <item itemvalue="JUnit.WebSocketTest" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
+        <item itemvalue="JUnit.java in kstream-to-websocket-with-terminal-foreach" />
+        <item itemvalue="JUnit.java in kstream-to-websocket-and-output-topic-separate" />
+        <item itemvalue="JUnit.java in kstream-to-websocket-and-output-topic" />
+        <item itemvalue="JUnit.java in kstream-to-websocket" />
+        <item itemvalue="JUnit.java in kstream-output-topic-grouped-by-key-no-supress" />
       </list>
     </recent_temporary>
   </component>
@@ -334,7 +300,7 @@
       <updated>1728758282986</updated>
       <workItem from="1728758284978" duration="7855000" />
       <workItem from="1728864182120" duration="195000" />
-      <workItem from="1728864405891" duration="11662000" />
+      <workItem from="1728864405891" duration="13012000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming a module (excruciating with .idea project directory hanging onto old module target)">
       <option name="closed" value="true" />
@@ -424,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728954456077</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module.">
+      <option name="closed" value="true" />
+      <created>1728954979166</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728954979166</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,6 +415,7 @@
     <MESSAGE value="Removed the readme docs since I do not really make any use of them, and instead I make use of a devlog kept in google docs that I may add later, though it includes much more overarching ideas liek infrastructure using terraform and GCP. &#10;&#10;Included is an example of using flatMapValues to branch 0 one or more records per record into a single topic without repartitioning data, which is a big deal for debuggability, maintainability, and performance, wince that may mean needing to create more partitions etc. Instead, since flatmapvalues only handles the values, the key comes in the same, and only more messages with different values are created and returned for further pipeline processing." />
     <MESSAGE value="Example of terminal stream processor (forEach) which returns void, and in this case publishes to a websocket rather than an output topic." />
     <MESSAGE value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key." />
-    <option name="LAST_COMMIT_MESSAGE" value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key." />
+    <MESSAGE value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module." />
+    <option name="LAST_COMMIT_MESSAGE" value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module." />
   </component>
 </project>
