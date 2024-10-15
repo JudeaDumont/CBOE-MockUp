@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module.">
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Optimize imports">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-grouped-by-changes-key-output-topic/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-grouped-by-changes-key-output-topic/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-grouped-by-changes-key-output-topic/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-grouped-by-changes-key-output-topic/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-grouped-by-changes-key-output-topic/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-grouped-by-changes-key-output-topic/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-grouped-by-changes-key-output-topic/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-output-topic/src/main/java/com/example/Topology.java" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-output-topic/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,11 +113,19 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.java in kstream-to-websocket-with-terminal-foreach">
-    <configuration name="java in kstream-output-topic-grouped-by-key-no-supress" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-output-topic-grouped-by-key-no-supress" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/src/test/java" />
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic">
+    <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-grouped-by-changes-key-output-topic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,6 +185,13 @@
     </configuration>
     <configuration name="Application (13)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-output-topic-grouped-by-key-no-supress" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (14)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-grouped-by-changes-key-output-topic" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -274,11 +297,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
         <item itemvalue="JUnit.java in kstream-to-websocket-with-terminal-foreach" />
         <item itemvalue="JUnit.java in kstream-to-websocket-and-output-topic-separate" />
         <item itemvalue="JUnit.java in kstream-to-websocket-and-output-topic" />
         <item itemvalue="JUnit.java in kstream-to-websocket" />
-        <item itemvalue="JUnit.java in kstream-output-topic-grouped-by-key-no-supress" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +323,7 @@
       <updated>1728758282986</updated>
       <workItem from="1728758284978" duration="7855000" />
       <workItem from="1728864182120" duration="195000" />
-      <workItem from="1728864405891" duration="13012000" />
+      <workItem from="1728864405891" duration="16156000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming a module (excruciating with .idea project directory hanging onto old module target)">
       <option name="closed" value="true" />
@@ -398,7 +421,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728954979166</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Optimize imports">
+      <option name="closed" value="true" />
+      <created>1728962047287</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1728962047287</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,6 +447,7 @@
     <MESSAGE value="Example of terminal stream processor (forEach) which returns void, and in this case publishes to a websocket rather than an output topic." />
     <MESSAGE value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key." />
     <MESSAGE value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module." />
-    <option name="LAST_COMMIT_MESSAGE" value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module." />
+    <MESSAGE value="Optimize imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimize imports" />
   </component>
 </project>
