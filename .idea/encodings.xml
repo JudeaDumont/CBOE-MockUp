@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-inverse-filter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic/src/main/java" charset="UTF-8" />

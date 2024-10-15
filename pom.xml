@@ -16,11 +16,11 @@
         <module>services/index-consumer</module>
         <module>experimental/kstream-output-topic</module>
         <module>experimental/kstream-to-websocket-and-output-topic</module>
+        <module>experimental/kstream-output-topic-grouped-by-key-no-supress</module>
         <module>experimental/kstream-to-websocket-and-output-topic-separate</module>
         <module>experimental/kstream-to-websocket</module>
         <module>experimental/kstream-to-websocket-with-terminal-foreach</module>
         <module>experimental/kstream-branching-output-topics</module>
-        <module>experimental/kstream-output-topic-no-supress</module>
         <module>experimental/kstream-filter</module>
         <module>experimental/kstream-output-topic-grouped-by-key</module>
         <module>experimental/kstream-inverse-filter</module>
