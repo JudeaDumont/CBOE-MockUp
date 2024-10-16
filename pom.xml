@@ -28,6 +28,7 @@
         <module>experimental/kstream-flat-map-tri-split</module>
         <module>experimental/kstream-flat-map-value-only-tri-split</module>
         <module>experimental/kstream-branching-output-topics-suppressed</module>
+        <module>experimental/ktable-output-topic-grouped-by-key-no-supress</module>
     </modules>
 
     <properties>
