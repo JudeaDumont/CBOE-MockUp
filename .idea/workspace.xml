@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Group By Example that changes the type of the key and aggregates the value of two messages together">
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/src/test/java/com/example/OutputTopicNoSuppressTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="KGroupedTable Aggregate with subtractor and a groupby on a ktable example. No idea why the subtraction aggregator is necessary, but will answer that question later.">
+      <change afterPath="$PROJECT_DIR$/experimental/kgroupedstream-cogroup/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kgroupedstream-cogroup/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kgroupedstream-cogroup/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kgroupedstream-cogroup/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kgroupedstream-cogroup/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kgroupedstream-cogroup/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kgroupedstream-cogroup/src/test/java/com/example/OutputTopicNoSuppressTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -48,57 +48,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.All in index-consumer.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.All in index-producer.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.All in user-details-service.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.ApplicationTests (1).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.ApplicationTests.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.ApplicationTests.testTopologyLogic.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.BranchingTopicsSuppressedTests.testTopologyLogic.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.BranchingTopicsTests.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.OutputTopicNoSuppressTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.OutputTopicNoSuppressTest.testTopologyLogic.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.OutputTopicTest (1).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.OutputTopicTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.OutputTopicTest.testTopologyLogic (1).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.OutputTopicTest.testTopologyLogic (2).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.OutputTopicTest.testTopologyLogic (3).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.OutputTopicTest.testTopologyLogic.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.SeparateWebSocketAndOutputTopicConfigTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.WebSocketAndOutputTopicTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.WebSocketTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-branching-output-topics-suppressed.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-branching-output-topics.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-filter.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-flat-map-tri-split.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-flat-map-value-only-tri-split.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-inverse-filter.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-output-topic-grouped-by-key-no-supress.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-output-topic-grouped-by-key.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-output-topic.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-to-websocket-and-output-topic-separate.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-to-websocket-and-output-topic.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-to-websocket-with-terminal-foreach.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.java in kstream-to-websocket.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dev/repos/mine/CBOE-MockUp/experimental&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in index-consumer.executor": "Debug",
+    "JUnit.All in index-producer.executor": "Debug",
+    "JUnit.All in user-details-service.executor": "Debug",
+    "JUnit.ApplicationTests (1).executor": "Debug",
+    "JUnit.ApplicationTests.executor": "Debug",
+    "JUnit.ApplicationTests.testTopologyLogic.executor": "Debug",
+    "JUnit.BranchingTopicsSuppressedTests.testTopologyLogic.executor": "Debug",
+    "JUnit.BranchingTopicsTests.executor": "Debug",
+    "JUnit.OutputTopicNoSuppressTest.executor": "Debug",
+    "JUnit.OutputTopicNoSuppressTest.testTopologyLogic (1).executor": "Debug",
+    "JUnit.OutputTopicNoSuppressTest.testTopologyLogic.executor": "Debug",
+    "JUnit.OutputTopicTest (1).executor": "Debug",
+    "JUnit.OutputTopicTest.executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (1).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (2).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (3).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic.executor": "Debug",
+    "JUnit.SeparateWebSocketAndOutputTopicConfigTest.executor": "Debug",
+    "JUnit.WebSocketAndOutputTopicTest.executor": "Debug",
+    "JUnit.WebSocketTest.executor": "Debug",
+    "JUnit.java in kstream-branching-output-topics-suppressed.executor": "Debug",
+    "JUnit.java in kstream-branching-output-topics.executor": "Debug",
+    "JUnit.java in kstream-filter.executor": "Debug",
+    "JUnit.java in kstream-flat-map-tri-split.executor": "Debug",
+    "JUnit.java in kstream-flat-map-value-only-tri-split.executor": "Debug",
+    "JUnit.java in kstream-inverse-filter.executor": "Debug",
+    "JUnit.java in kstream-output-topic-grouped-by-key-no-supress.executor": "Debug",
+    "JUnit.java in kstream-output-topic-grouped-by-key.executor": "Debug",
+    "JUnit.java in kstream-output-topic.executor": "Debug",
+    "JUnit.java in kstream-to-websocket-and-output-topic-separate.executor": "Debug",
+    "JUnit.java in kstream-to-websocket-and-output-topic.executor": "Debug",
+    "JUnit.java in kstream-to-websocket-with-terminal-foreach.executor": "Debug",
+    "JUnit.java in kstream-to-websocket.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/dev/repos/mine/CBOE-MockUp/experimental",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev\repos\mine\CBOE-MockUp\experimental" />
@@ -113,7 +114,23 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicNoSuppressTest.testTopologyLogic">
+  <component name="RunManager" selected="JUnit.OutputTopicNoSuppressTest.testTopologyLogic (1)">
+    <configuration name="OutputTopicNoSuppressTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kgroupedstream-cogroup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicNoSuppressTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OutputTopicNoSuppressTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ktable-output-topic-grouped-by-key-no-supress" />
       <extension name="coverage">
@@ -150,14 +167,6 @@
       <module name="kstream-to-websocket-and-output-topic-separate" />
       <option name="TEST_OBJECT" value="directory" />
       <dir value="$PROJECT_DIR$/experimental/kstream-to-websocket-and-output-topic-separate/src/test/java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="java in kstream-to-websocket-and-output-topic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-to-websocket-and-output-topic" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/experimental/kstream-to-websocket-and-output-topic/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -207,6 +216,13 @@
     </configuration>
     <configuration name="Application (15)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ktable-output-topic-grouped-by-key-no-supress" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (16)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kgroupedstream-cogroup" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -312,11 +328,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicNoSuppressTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicNoSuppressTest.testTopologyLogic" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
         <item itemvalue="JUnit.java in kstream-to-websocket-with-terminal-foreach" />
         <item itemvalue="JUnit.java in kstream-to-websocket-and-output-topic-separate" />
-        <item itemvalue="JUnit.java in kstream-to-websocket-and-output-topic" />
       </list>
     </recent_temporary>
   </component>
@@ -339,7 +355,7 @@
       <workItem from="1728758284978" duration="7855000" />
       <workItem from="1728864182120" duration="195000" />
       <workItem from="1728864405891" duration="20324000" />
-      <workItem from="1729055911547" duration="1498000" />
+      <workItem from="1729055911547" duration="5227000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming a module (excruciating with .idea project directory hanging onto old module target)">
       <option name="closed" value="true" />
@@ -453,7 +469,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728965348132</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="KGroupedTable Aggregate with subtractor and a groupby on a ktable example. No idea why the subtraction aggregator is necessary, but will answer that question later.">
+      <option name="closed" value="true" />
+      <created>1729057427229</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1729057427229</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,6 +497,7 @@
     <MESSAGE value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module." />
     <MESSAGE value="Optimize imports" />
     <MESSAGE value="Group By Example that changes the type of the key and aggregates the value of two messages together" />
-    <option name="LAST_COMMIT_MESSAGE" value="Group By Example that changes the type of the key and aggregates the value of two messages together" />
+    <MESSAGE value="KGroupedTable Aggregate with subtractor and a groupby on a ktable example. No idea why the subtraction aggregator is necessary, but will answer that question later." />
+    <option name="LAST_COMMIT_MESSAGE" value="KGroupedTable Aggregate with subtractor and a groupby on a ktable example. No idea why the subtraction aggregator is necessary, but will answer that question later." />
   </component>
 </project>
