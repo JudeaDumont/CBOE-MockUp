@@ -18,6 +18,7 @@
         <module>experimental/kstream-map-output-topic</module>
         <module>experimental/kstream-output-topic</module>
         <module>experimental/kstream-merge</module>
+        <module>experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic</module>
         <module>experimental/kstream-select-key-change-type-output-topic</module>
         <module>experimental/kstream-select-key-output-topic</module>
         <module>experimental/kstream-to-peek-websocket-and-output-topic</module>
