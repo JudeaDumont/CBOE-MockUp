@@ -17,6 +17,8 @@
         <module>experimental/kgroupedstream-cogroup</module>
         <module>experimental/kstream-map-output-topic</module>
         <module>experimental/kstream-output-topic</module>
+        <module>experimental/kstream-map-values-output-topic</module>
+        <module>experimental/kstream-map-change-types-output-topic</module>
         <module>experimental/kstream-grouped-by-changes-key-output-topic</module>
         <module>experimental/kstream-to-websocket-and-output-topic</module>
         <module>experimental/kstream-output-topic-grouped-by-key-no-supress</module>
