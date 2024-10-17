@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Merge example with 2 kstreams">
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/main/java/com/example/KafkaStreams/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/main/java/com/example/WebSocket/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/main/java/com/example/WebSocket/WebSocketHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/test/java/com/example/WebSocketAndOutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Example where an input topic splits and sends messages to botha  websocket and an output topic, and it uses peek to send to the websocket as a &quot;side effect&quot;">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -68,6 +66,7 @@
     "JUnit.OutputTopicTest.testTopologyLogic (1).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic (2).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic (3).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (4).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic.executor": "Debug",
     "JUnit.SeparateWebSocketAndOutputTopicConfigTest.executor": "Debug",
     "JUnit.WebSocketAndOutputTopicTest.executor": "Debug",
@@ -116,23 +115,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WebSocketAndOutputTopicTest">
-    <configuration name="OutputTopicTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-map-output-topic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (4)">
     <configuration name="OutputTopicTest.testTopologyLogic (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-map-change-types-output-topic" />
       <extension name="coverage">
@@ -151,6 +134,22 @@
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-map-values-output-topic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest.testTopologyLogic (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-select-key-output-topic" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -287,6 +286,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (22)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-select-key-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-to-websocket-and-output-topic" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -380,11 +386,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (4)" />
         <item itemvalue="JUnit.WebSocketAndOutputTopicTest" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -407,7 +413,7 @@
       <workItem from="1728758284978" duration="7855000" />
       <workItem from="1728864182120" duration="195000" />
       <workItem from="1728864405891" duration="20324000" />
-      <workItem from="1729055911547" duration="10177000" />
+      <workItem from="1729055911547" duration="11361000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming a module (excruciating with .idea project directory hanging onto old module target)">
       <option name="closed" value="true" />
@@ -561,7 +567,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729127165009</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Example where an input topic splits and sends messages to botha  websocket and an output topic, and it uses peek to send to the websocket as a &quot;side effect&quot;">
+      <option name="closed" value="true" />
+      <created>1729128033316</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1729128033316</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,6 +600,7 @@
     <MESSAGE value="Mapping example with kstream implemented, this one requires explicit setting of the serializers meaning that map can change the key and or value fi you wish." />
     <MESSAGE value="Mapping example where the key and value types change, another example with mapValues that just changes the value type." />
     <MESSAGE value="Merge example with 2 kstreams" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge example with 2 kstreams" />
+    <MESSAGE value="Example where an input topic splits and sends messages to botha  websocket and an output topic, and it uses peek to send to the websocket as a &quot;side effect&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Example where an input topic splits and sends messages to botha  websocket and an output topic, and it uses peek to send to the websocket as a &quot;side effect&quot;" />
   </component>
 </project>
