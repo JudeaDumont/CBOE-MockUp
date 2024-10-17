@@ -17,6 +17,7 @@
     <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-select-key-change-type-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-select-key-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/main/java" charset="UTF-8" />

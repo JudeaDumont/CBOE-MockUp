@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="select key example where the keys type changes">
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic/src/test/java/com/example/OutputTopicNoSuppressTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="toTable example which replaces the count that I used to get a table out a stream so I could run a group by that changed the key and value of a ktable. Now it does not change the value but does still replaces updated values in the aggregate with *.">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -115,7 +115,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicNoSuppressTest.testTopologyLogic">
+  <component name="RunManager" selected="JUnit.OutputTopicTest">
     <configuration name="OutputTopicNoSuppressTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-to-table-grouped-by-key-no-supress-to-output-topic" />
       <extension name="coverage">
@@ -128,6 +128,21 @@
       <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicNoSuppressTest" />
       <option name="METHOD_NAME" value="testTopologyLogic" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-repartition-output-topic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,22 +165,6 @@
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-select-key-output-topic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-merge" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -307,6 +306,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (25)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-repartition-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-to-websocket-and-output-topic" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -400,11 +406,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest" />
         <item itemvalue="JUnit.OutputTopicNoSuppressTest.testTopologyLogic" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (4)" />
         <item itemvalue="JUnit.WebSocketAndOutputTopicTest" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
       </list>
     </recent_temporary>
   </component>
@@ -427,7 +433,7 @@
       <workItem from="1728758284978" duration="7855000" />
       <workItem from="1728864182120" duration="195000" />
       <workItem from="1728864405891" duration="20324000" />
-      <workItem from="1729055911547" duration="12383000" />
+      <workItem from="1729055911547" duration="12907000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming a module (excruciating with .idea project directory hanging onto old module target)">
       <option name="closed" value="true" />
@@ -605,7 +611,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729129542538</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="toTable example which replaces the count that I used to get a table out a stream so I could run a group by that changed the key and value of a ktable. Now it does not change the value but does still replaces updated values in the aggregate with *.">
+      <option name="closed" value="true" />
+      <created>1729130403046</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1729130403046</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -633,6 +647,7 @@
     <MESSAGE value="Example where an input topic splits and sends messages to botha  websocket and an output topic, and it uses peek to send to the websocket as a &quot;side effect&quot;" />
     <MESSAGE value="select key example finished, I have done similar examples with group by and with map where I can change the key, or even change the type of the key." />
     <MESSAGE value="select key example where the keys type changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="select key example where the keys type changes" />
+    <MESSAGE value="toTable example which replaces the count that I used to get a table out a stream so I could run a group by that changed the key and value of a ktable. Now it does not change the value but does still replaces updated values in the aggregate with *." />
+    <option name="LAST_COMMIT_MESSAGE" value="toTable example which replaces the count that I used to get a table out a stream so I could run a group by that changed the key and value of a ktable. Now it does not change the value but does still replaces updated values in the aggregate with *." />
   </component>
 </project>
