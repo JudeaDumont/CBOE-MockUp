@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Mapping example with kstream implemented, this one requires explicit setting of the serializers meaning that map can change the key and or value fi you wish.">
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-change-types-output-topic/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-change-types-output-topic/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-change-types-output-topic/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-change-types-output-topic/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-change-types-output-topic/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-change-types-output-topic/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-change-types-output-topic/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-values-output-topic/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-values-output-topic/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-values-output-topic/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-values-output-topic/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-values-output-topic/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-values-output-topic/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-map-values-output-topic/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Mapping example where the key and value types change, another example with mapValues that just changes the value type.">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-merge/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-merge/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-merge/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-merge/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-merge/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-merge/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-merge/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -121,25 +114,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (3)">
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic">
     <configuration name="OutputTopicNoSuppressTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kgroupedstream-cogroup" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicNoSuppressTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicNoSuppressTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ktable-output-topic-grouped-by-key-no-supress" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -188,6 +165,22 @@
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-map-values-output-topic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-merge" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -274,6 +267,13 @@
     </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-to-websocket" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (20)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-merge" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -372,11 +372,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicNoSuppressTest.testTopologyLogic (1)" />
-        <item itemvalue="JUnit.OutputTopicNoSuppressTest.testTopologyLogic" />
       </list>
     </recent_temporary>
   </component>
@@ -399,7 +399,7 @@
       <workItem from="1728758284978" duration="7855000" />
       <workItem from="1728864182120" duration="195000" />
       <workItem from="1728864405891" duration="20324000" />
-      <workItem from="1729055911547" duration="7628000" />
+      <workItem from="1729055911547" duration="9293000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming a module (excruciating with .idea project directory hanging onto old module target)">
       <option name="closed" value="true" />
@@ -537,7 +537,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729118164930</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Mapping example where the key and value types change, another example with mapValues that just changes the value type.">
+      <option name="closed" value="true" />
+      <created>1729125472482</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1729125472482</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,6 +568,7 @@
     <MESSAGE value="KGroupedTable Aggregate with subtractor and a groupby on a ktable example. No idea why the subtraction aggregator is necessary, but will answer that question later." />
     <MESSAGE value="Cogroup example with two KGroupedStreams" />
     <MESSAGE value="Mapping example with kstream implemented, this one requires explicit setting of the serializers meaning that map can change the key and or value fi you wish." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mapping example with kstream implemented, this one requires explicit setting of the serializers meaning that map can change the key and or value fi you wish." />
+    <MESSAGE value="Mapping example where the key and value types change, another example with mapValues that just changes the value type." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mapping example where the key and value types change, another example with mapValues that just changes the value type." />
   </component>
 </project>
