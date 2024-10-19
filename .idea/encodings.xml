@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/experimental/kgroupedstream-cogroup/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-branching-output-topics-suppressed/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-branching-output-topics/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-filter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-grouped-by-changes-key-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-inverse-filter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-map-change-types-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-map-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-map-values-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-merge/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key-no-supress/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic-grouped-by-key/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic-no-supress/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-select-key-change-type-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-select-key-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket-and-output-topic-separate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket-and-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/index-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/index-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/user-details-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

@@ -14,13 +14,31 @@
         <module>services/user-details-service</module>
         <module>services/index-producer</module>
         <module>services/index-consumer</module>
+        <module>experimental/kgroupedstream-cogroup</module>
+        <module>experimental/kstream-map-output-topic</module>
         <module>experimental/kstream-output-topic</module>
+        <module>experimental/kstream-merge</module>
+        <module>experimental/kstream-repartition-output-topic</module>
+        <module>experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic</module>
+        <module>experimental/kstream-select-key-change-type-output-topic</module>
+        <module>experimental/kstream-select-key-output-topic</module>
+        <module>experimental/kstream-to-peek-websocket-and-output-topic</module>
+        <module>experimental/kstream-map-values-output-topic</module>
+        <module>experimental/kstream-map-change-types-output-topic</module>
+        <module>experimental/kstream-grouped-by-changes-key-output-topic</module>
         <module>experimental/kstream-to-websocket-and-output-topic</module>
+        <module>experimental/kstream-output-topic-grouped-by-key-no-supress</module>
         <module>experimental/kstream-to-websocket-and-output-topic-separate</module>
         <module>experimental/kstream-to-websocket</module>
+        <module>experimental/kstream-to-websocket-with-terminal-foreach</module>
         <module>experimental/kstream-branching-output-topics</module>
-        <module>experimental/kstream-output-topic-no-supress</module>
+        <module>experimental/kstream-filter</module>
+        <module>experimental/kstream-output-topic-grouped-by-key</module>
+        <module>experimental/kstream-inverse-filter</module>
+        <module>experimental/kstream-flat-map-tri-split</module>
+        <module>experimental/kstream-flat-map-value-only-tri-split</module>
         <module>experimental/kstream-branching-output-topics-suppressed</module>
+        <module>experimental/ktable-output-topic-grouped-by-key-no-supress</module>
     </modules>
 
     <properties>

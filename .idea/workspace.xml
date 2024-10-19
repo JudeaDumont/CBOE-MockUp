@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="toTable example which replaces the count that I used to get a table out a stream so I could run a group by that changed the key and value of a ktable. Now it does not change the value but does still replaces updated values in the aggregate with *.">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JudeaDumont&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JudeaDumont/CBOE-MockUp.git&quot;,
+    &quot;accountId&quot;: &quot;46ace452-0e59-4bc0-9460-709201ba0505&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/kafka/spring-kafka/3.1.4/spring-kafka-3.1.4.jar!/org/springframework/kafka/annotation/KafkaStreamsDefaultConfiguration.class" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2nLhUlSkh86xrbrb26ii6QqerCT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in index-consumer.executor": "Debug",
+    "JUnit.All in index-producer.executor": "Debug",
+    "JUnit.All in user-details-service.executor": "Debug",
+    "JUnit.ApplicationTests (1).executor": "Debug",
+    "JUnit.ApplicationTests.executor": "Debug",
+    "JUnit.ApplicationTests.testTopologyLogic.executor": "Debug",
+    "JUnit.BranchingTopicsSuppressedTests.testTopologyLogic.executor": "Debug",
+    "JUnit.BranchingTopicsTests.executor": "Debug",
+    "JUnit.OutputTopicNoSuppressTest.executor": "Debug",
+    "JUnit.OutputTopicNoSuppressTest.testTopologyLogic (1).executor": "Debug",
+    "JUnit.OutputTopicNoSuppressTest.testTopologyLogic.executor": "Debug",
+    "JUnit.OutputTopicTest (1).executor": "Debug",
+    "JUnit.OutputTopicTest.executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (1).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (2).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (3).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (4).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic.executor": "Debug",
+    "JUnit.SeparateWebSocketAndOutputTopicConfigTest.executor": "Debug",
+    "JUnit.WebSocketAndOutputTopicTest.executor": "Debug",
+    "JUnit.WebSocketTest.executor": "Debug",
+    "JUnit.java in kstream-branching-output-topics-suppressed.executor": "Debug",
+    "JUnit.java in kstream-branching-output-topics.executor": "Debug",
+    "JUnit.java in kstream-filter.executor": "Debug",
+    "JUnit.java in kstream-flat-map-tri-split.executor": "Debug",
+    "JUnit.java in kstream-flat-map-value-only-tri-split.executor": "Debug",
+    "JUnit.java in kstream-inverse-filter.executor": "Debug",
+    "JUnit.java in kstream-output-topic-grouped-by-key-no-supress.executor": "Debug",
+    "JUnit.java in kstream-output-topic-grouped-by-key.executor": "Debug",
+    "JUnit.java in kstream-output-topic.executor": "Debug",
+    "JUnit.java in kstream-to-websocket-and-output-topic-separate.executor": "Debug",
+    "JUnit.java in kstream-to-websocket-and-output-topic.executor": "Debug",
+    "JUnit.java in kstream-to-websocket-with-terminal-foreach.executor": "Debug",
+    "JUnit.java in kstream-to-websocket.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/dev/repos/mine/CBOE-MockUp/experimental",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\repos\mine\CBOE-MockUp\experimental" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.OutputTopicTest">
+    <configuration name="OutputTopicNoSuppressTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-to-table-grouped-by-key-no-supress-to-output-topic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicNoSuppressTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-repartition-output-topic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-select-key-change-type-output-topic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest.testTopologyLogic (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-select-key-output-topic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebSocketAndOutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-to-peek-websocket-and-output-topic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.WebSocketAndOutputTopicTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (10)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-flat-map-value-only-tri-split" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (11)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-to-websocket-with-terminal-foreach" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (12)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-output-topic-grouped-by-key" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (13)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-output-topic-grouped-by-key-no-supress" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (14)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-grouped-by-changes-key-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (15)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ktable-output-topic-grouped-by-key-no-supress" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (16)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kgroupedstream-cogroup" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (17)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-map-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (18)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-map-change-types-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (19)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-map-values-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-to-websocket" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (20)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-merge" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (21)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-to-peek-websocket-and-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (22)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-select-key-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (23)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-select-key-change-type-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (24)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-to-table-grouped-by-key-no-supress-to-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (25)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-repartition-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-to-websocket-and-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-to-websocket-and-output-topic-separate" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (4)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-branching-output-topics" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (5)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-branching-output-topics-suppressed" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (6)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-branching-output-topics-suppressed" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (7)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-filter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (8)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-inverse-filter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (9)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-flat-map-tri-split" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-output-topic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IndexConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="index-consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.index_consumer.IndexConsumerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IndexProducerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="index-producer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.index_producer.IndexProducerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDetailsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-details-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.user_details_service.UserDetailsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.user_service.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OutputTopicTest" />
+        <item itemvalue="JUnit.OutputTopicNoSuppressTest.testTopologyLogic" />
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (4)" />
+        <item itemvalue="JUnit.WebSocketAndOutputTopicTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="" />
+      <created>1728758282986</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728758282986</updated>
+      <workItem from="1728758284978" duration="7855000" />
+      <workItem from="1728864182120" duration="195000" />
+      <workItem from="1728864405891" duration="20324000" />
+      <workItem from="1729055911547" duration="12907000" />
+    </task>
+    <task id="LOCAL-00001" summary="Renaming a module (excruciating with .idea project directory hanging onto old module target)">
+      <option name="closed" value="true" />
+      <created>1728758454291</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728758454291</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Finished the branching example from apache kafka streams DSL. I have no idea how a stream is made up to be terminal or not. The use of supress and its impact to the single topic example and the branching topic example is a total mystery. Why does single require supress to emit results and the branching topics require its removal?">
+      <option name="closed" value="true" />
+      <created>1728769743865</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728769743865</updated>
+    </task>
+    <task id="LOCAL-00003" summary="finished examples of both suppressed and non suppressed examples of branching output topics. &#10;&#10;the single output topic example will emit intermdeiate results if not suppressed. and the branching output topic will only emit results if you send a second batch of messages with an advanced timestamp.">
+      <option name="closed" value="true" />
+      <created>1728772747580</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728772747580</updated>
+    </task>
+    <task id="LOCAL-00004" summary="KStream Filter Example">
+      <option name="closed" value="true" />
+      <created>1728864071693</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728864071693</updated>
+    </task>
+    <task id="LOCAL-00005" summary="KStream Inverse Filter Example">
+      <option name="closed" value="true" />
+      <created>1728864726230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728864726230</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Flat map duplicating messages example with explicit deserializer due to flat maps ability to change the key and val type">
+      <option name="closed" value="true" />
+      <created>1728869470803</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728869470803</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Flat map example was supposed to be a tri-split">
+      <option name="closed" value="true" />
+      <created>1728930815902</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728930815902</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Removed the readme docs since I do not really make any use of them, and instead I make use of a devlog kept in google docs that I may add later, though it includes much more overarching ideas liek infrastructure using terraform and GCP. &#10;&#10;Included is an example of using flatMapValues to branch 0 one or more records per record into a single topic without repartitioning data, which is a big deal for debuggability, maintainability, and performance, wince that may mean needing to create more partitions etc. Instead, since flatmapvalues only handles the values, the key comes in the same, and only more messages with different values are created and returned for further pipeline processing.">
+      <option name="closed" value="true" />
+      <created>1728935189740</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728935189740</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Removed the readme docs since I do not really make any use of them, and instead I make use of a devlog kept in google docs that I may add later, though it includes much more overarching ideas liek infrastructure using terraform and GCP. &#10;&#10;Included is an example of using flatMapValues to branch 0 one or more records per record into a single topic without repartitioning data, which is a big deal for debuggability, maintainability, and performance, wince that may mean needing to create more partitions etc. Instead, since flatmapvalues only handles the values, the key comes in the same, and only more messages with different values are created and returned for further pipeline processing.">
+      <option name="closed" value="true" />
+      <created>1728935342777</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728935342777</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Example of terminal stream processor (forEach) which returns void, and in this case publishes to a websocket rather than an output topic.">
+      <option name="closed" value="true" />
+      <created>1728936020246</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1728936020246</updated>
+    </task>
+    <task id="LOCAL-00011" summary="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key.">
+      <option name="closed" value="true" />
+      <created>1728954456077</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1728954456077</updated>
+    </task>
+    <task id="LOCAL-00012" summary="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module.">
+      <option name="closed" value="true" />
+      <created>1728954979166</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728954979166</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Optimize imports">
+      <option name="closed" value="true" />
+      <created>1728962047287</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1728962047287</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Group By Example that changes the type of the key and aggregates the value of two messages together">
+      <option name="closed" value="true" />
+      <created>1728965348132</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1728965348132</updated>
+    </task>
+    <task id="LOCAL-00015" summary="KGroupedTable Aggregate with subtractor and a groupby on a ktable example. No idea why the subtraction aggregator is necessary, but will answer that question later.">
+      <option name="closed" value="true" />
+      <created>1729057427229</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1729057427229</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Cogroup example with two KGroupedStreams">
+      <option name="closed" value="true" />
+      <created>1729095693716</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1729095693716</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Mapping example with kstream implemented, this one requires explicit setting of the serializers meaning that map can change the key and or value fi you wish.">
+      <option name="closed" value="true" />
+      <created>1729118164930</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1729118164930</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Mapping example where the key and value types change, another example with mapValues that just changes the value type.">
+      <option name="closed" value="true" />
+      <created>1729125472482</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1729125472482</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Merge example with 2 kstreams">
+      <option name="closed" value="true" />
+      <created>1729127165009</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1729127165009</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Example where an input topic splits and sends messages to botha  websocket and an output topic, and it uses peek to send to the websocket as a &quot;side effect&quot;">
+      <option name="closed" value="true" />
+      <created>1729128033316</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1729128033316</updated>
+    </task>
+    <task id="LOCAL-00021" summary="select key example finished, I have done similar examples with group by and with map where I can change the key, or even change the type of the key.">
+      <option name="closed" value="true" />
+      <created>1729129380044</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1729129380044</updated>
+    </task>
+    <task id="LOCAL-00022" summary="select key example where the keys type changes">
+      <option name="closed" value="true" />
+      <created>1729129542538</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1729129542538</updated>
+    </task>
+    <task id="LOCAL-00023" summary="toTable example which replaces the count that I used to get a table out a stream so I could run a group by that changed the key and value of a ktable. Now it does not change the value but does still replaces updated values in the aggregate with *.">
+      <option name="closed" value="true" />
+      <created>1729130403046</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1729130403046</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Renaming a module (excruciating with .idea project directory hanging onto old module target)" />
+    <MESSAGE value="Finished the branching example from apache kafka streams DSL. I have no idea how a stream is made up to be terminal or not. The use of supress and its impact to the single topic example and the branching topic example is a total mystery. Why does single require supress to emit results and the branching topics require its removal?" />
+    <MESSAGE value="finished examples of both suppressed and non suppressed examples of branching output topics. &#10;&#10;the single output topic example will emit intermdeiate results if not suppressed. and the branching output topic will only emit results if you send a second batch of messages with an advanced timestamp." />
+    <MESSAGE value="KStream Filter Example" />
+    <MESSAGE value="KStream Inverse Filter Example" />
+    <MESSAGE value="Flat map duplicating messages example with explicit deserializer due to flat maps ability to change the key and val type" />
+    <MESSAGE value="Flat map example was supposed to be a tri-split" />
+    <MESSAGE value="Removed the readme docs since I do not really make any use of them, and instead I make use of a devlog kept in google docs that I may add later, though it includes much more overarching ideas liek infrastructure using terraform and GCP. &#10;&#10;Included is an example of using flatMapValues to branch 0 one or more records per record into a single topic without repartitioning data, which is a big deal for debuggability, maintainability, and performance, wince that may mean needing to create more partitions etc. Instead, since flatmapvalues only handles the values, the key comes in the same, and only more messages with different values are created and returned for further pipeline processing." />
+    <MESSAGE value="Example of terminal stream processor (forEach) which returns void, and in this case publishes to a websocket rather than an output topic." />
+    <MESSAGE value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key." />
+    <MESSAGE value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module." />
+    <MESSAGE value="Optimize imports" />
+    <MESSAGE value="Group By Example that changes the type of the key and aggregates the value of two messages together" />
+    <MESSAGE value="KGroupedTable Aggregate with subtractor and a groupby on a ktable example. No idea why the subtraction aggregator is necessary, but will answer that question later." />
+    <MESSAGE value="Cogroup example with two KGroupedStreams" />
+    <MESSAGE value="Mapping example with kstream implemented, this one requires explicit setting of the serializers meaning that map can change the key and or value fi you wish." />
+    <MESSAGE value="Mapping example where the key and value types change, another example with mapValues that just changes the value type." />
+    <MESSAGE value="Merge example with 2 kstreams" />
+    <MESSAGE value="Example where an input topic splits and sends messages to botha  websocket and an output topic, and it uses peek to send to the websocket as a &quot;side effect&quot;" />
+    <MESSAGE value="select key example finished, I have done similar examples with group by and with map where I can change the key, or even change the type of the key." />
+    <MESSAGE value="select key example where the keys type changes" />
+    <MESSAGE value="toTable example which replaces the count that I used to get a table out a stream so I could run a group by that changed the key and value of a ktable. Now it does not change the value but does still replaces updated values in the aggregate with *." />
+    <option name="LAST_COMMIT_MESSAGE" value="toTable example which replaces the count that I used to get a table out a stream so I could run a group by that changed the key and value of a ktable. Now it does not change the value but does still replaces updated values in the aggregate with *." />
+  </component>
+</project>
