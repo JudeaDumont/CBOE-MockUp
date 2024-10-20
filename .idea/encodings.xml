@@ -9,6 +9,7 @@
     <file url="file://$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-grouped-by-changes-key-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-inactivity-gap-count/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-inverse-filter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-map-change-types-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-map-output-topic/src/main/java" charset="UTF-8" />
@@ -21,6 +22,7 @@
     <file url="file://$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-select-key-change-type-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-select-key-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-sliding-count/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-sliding-window/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-to-peek-websocket-and-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-to-table-grouped-by-key-no-supress-to-output-topic/src/main/java" charset="UTF-8" />
@@ -29,6 +31,7 @@
     <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket-with-terminal-foreach/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-tumbling-aggregate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-tumbling-count/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/index-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/index-producer/src/main/java" charset="UTF-8" />
