@@ -20,6 +20,9 @@
         <module>experimental/kstream-map-output-topic</module>
         <module>experimental/kstream-output-topic</module>
         <module>experimental/kstream-merge</module>
+        <module>experimental/kstream-inactivity-gap-reduce</module>
+        <module>experimental/kstream-sliding-reduce</module>
+        <module>experimental/kstream-tumbling-reduce</module>
         <module>experimental/kstream-inactivity-gap-count</module>
         <module>experimental/kstream-sliding-count</module>
         <module>experimental/kstream-tumbling-count</module>

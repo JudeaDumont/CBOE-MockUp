@@ -5,27 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="not sure what happened to te sldiing window example but it is back now.">
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-count/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-count/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-count/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-count/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-count/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-count/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-count/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -53,10 +53,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/kafka/spring-kafka/3.1.4/spring-kafka-3.1.4.jar!/org/springframework/kafka/annotation/KafkaStreamsDefaultConfiguration.class" root0="SKIP_INSPECTION" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -87,6 +87,7 @@
     "JUnit.OutputTopicTest.testTopologyLogic (2).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic (3).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic (4).executor": "Debug",
+    "JUnit.OutputTopicTest.testTopologyLogic (5).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic.executor": "Debug",
     "JUnit.SeparateWebSocketAndOutputTopicConfigTest.executor": "Debug",
     "JUnit.WebSocketAndOutputTopicTest.executor": "Debug",
@@ -107,7 +108,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/dev/repos/mine/CBOE-MockUp/experimental",
+    "last_opened_file_path": "C:/Users/dumon/IdeaProjects/CBOE-MockUp/experimental",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -123,8 +124,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\dev\repos\mine\CBOE-MockUp\experimental" />
       <recent name="C:\Users\dumon\IdeaProjects\CBOE-MockUp\experimental" />
+      <recent name="C:\dev\repos\mine\CBOE-MockUp\experimental" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,9 +137,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic">
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (2)">
     <configuration name="OutputTopicTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-inactivity-gap-aggregate" />
+      <module name="kstream-sliding-reduce" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -154,23 +155,7 @@
       </method>
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-sliding-window" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-tumbling-count" />
+      <module name="kstream-inactivity-gap-reduce" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -187,6 +172,22 @@
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-sliding-count" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest.testTopologyLogic (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-tumbling-reduce" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -385,6 +386,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (32)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-tumbling-reduce" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (33)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-sliding-reduce" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (34)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-inactivity-gap-reduce" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-to-websocket-and-output-topic-separate" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -471,11 +493,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (4)" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (5)" />
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (4)" />
       </list>
     </recent_temporary>
   </component>
