@@ -4,28 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="not sure what happened to te sldiing window example but it is back now.">
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Tumbling reduce, sliding reduce, and inactivity gap reduce examples added">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-aggregate-letter-count/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-aggregate-letter-count/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-aggregate-letter-count/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-aggregate-letter-count/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-aggregate-letter-count/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-aggregate-letter-count/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-aggregate-letter-count/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -137,7 +123,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (2)">
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (3)">
     <configuration name="OutputTopicTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-sliding-reduce" />
       <extension name="coverage">
@@ -170,8 +156,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-sliding-count" />
+    <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-tumbling-aggregate-letter-count" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -407,6 +393,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (35)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-tumbling-aggregate-letter-count" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-to-websocket-and-output-topic-separate" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -493,11 +486,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (5)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -723,7 +716,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729406844242</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Tumbling reduce, sliding reduce, and inactivity gap reduce examples added">
+      <option name="closed" value="true" />
+      <created>1729471955161</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1729471955161</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -741,7 +742,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Renaming a module (excruciating with .idea project directory hanging onto old module target)" />
     <MESSAGE value="Finished the branching example from apache kafka streams DSL. I have no idea how a stream is made up to be terminal or not. The use of supress and its impact to the single topic example and the branching topic example is a total mystery. Why does single require supress to emit results and the branching topics require its removal?" />
     <MESSAGE value="finished examples of both suppressed and non suppressed examples of branching output topics. &#10;&#10;the single output topic example will emit intermdeiate results if not suppressed. and the branching output topic will only emit results if you send a second batch of messages with an advanced timestamp." />
     <MESSAGE value="KStream Filter Example" />
@@ -766,6 +766,7 @@
     <MESSAGE value="I have to commit the vcs.xml file because if it is unversioned then I cannot update." />
     <MESSAGE value="inactivity gap example exemplified. So I have the tests for different windows, but am really missing the understanding of why the test results are different." />
     <MESSAGE value="not sure what happened to te sldiing window example but it is back now." />
-    <option name="LAST_COMMIT_MESSAGE" value="not sure what happened to te sldiing window example but it is back now." />
+    <MESSAGE value="Tumbling reduce, sliding reduce, and inactivity gap reduce examples added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tumbling reduce, sliding reduce, and inactivity gap reduce examples added" />
   </component>
 </project>
