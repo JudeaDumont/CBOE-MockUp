@@ -70,14 +70,14 @@ public class OutputTopicTest {
 
 	@Test
 	public void testTopologyLogic() {
-		inputTopicX.pipeInput(1, "a", 1L);
+		inputTopic.pipeInput(1, "a", 1L);
 		inputTopic.pipeInput(2, "b", 10L);
-		inputTopicX.pipeInput(3, "c", 20L);
-		inputTopic.pipeInput(1, "d", 30L);
+		inputTopic.pipeInput(3, "c", 20L);
+		inputTopicX.pipeInput(1, "d", 30L);
 		inputTopicX.pipeInput(2, "e", 40L);
-		inputTopic.pipeInput(3, "f", 50L);
+		inputTopicX.pipeInput(3, "f", 50L);
 
-		Awaitility.waitAtMost(Duration.ofSeconds(5)).until(() -> outputTopic.getQueueSize() == 6L);
-		assertThat(outputTopic.readValuesToList()).isEqualTo(List.of("a", "b", "c", "d", "e", "f"));
+		Awaitility.waitAtMost(Duration.ofSeconds(5)).until(() -> outputTopic.getQueueSize() == 3L);
+		assertThat(outputTopic.readValuesToList()).isEqualTo(List.of("ad", "be", "cf"));
 	}
 }
