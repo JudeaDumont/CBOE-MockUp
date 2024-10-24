@@ -74,12 +74,18 @@ public class OutputTopicTest {
 		inputTopic.pipeInput(2, "b", 10L);
 		inputTopic.pipeInput(3, "c", 20L);
 		inputTopic.pipeInput(4, "g", 30L);
+		inputTopic.pipeInput(5, "h", 35L);
 		inputTopicX.pipeInput(1, "d", 40L);
 		inputTopicX.pipeInput(2, "e", 50L);
 		inputTopicX.pipeInput(3, "f", 60L);
-		inputTopicX.pipeInput(5, "h", 70L);
+		inputTopicX.pipeInput(6, "i", 70L);
 
 		Awaitility.waitAtMost(Duration.ofSeconds(5)).until(() -> outputTopic.getQueueSize() == 3L);
 		assertThat(outputTopic.readValuesToList()).isEqualTo(List.of("ad", "be", "cf"));
+
+		inputTopicX.pipeInput(7, "j", 7001L); //close the window
+
+		Awaitility.waitAtMost(Duration.ofSeconds(15)).until(() -> outputTopic.getQueueSize() > 0L);
+		assertThat(outputTopic.readValuesToList()).isEqualTo(List.of("g0", "h0"));
 	}
 }
