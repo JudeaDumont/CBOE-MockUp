@@ -18,6 +18,8 @@
         <module>experimental/kstream-tumbling-aggregate</module>
         <module>experimental/kstream-join</module>
         <module>experimental/ktable-join</module>
+        <module>experimental/ktable-foreign-key-left-join</module>
+        <module>experimental/ktable-foreign-key-join</module>
         <module>experimental/ktable-left-join</module>
         <module>experimental/ktable-outer-join</module>
         <module>experimental/kstream-left-join</module>

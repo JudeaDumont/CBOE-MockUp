@@ -4,29 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Outer join with example that distinguishes it from join implemented and added.">
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Table join, left-join, and outer-join with examples that distinguishes them from each other.">
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-join/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-join/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-join/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-join/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-join/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-join/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-left-join/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-left-join/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-left-join/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-left-join/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-left-join/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-left-join/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-foreign-key-left-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -139,24 +133,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (1)">
-    <configuration name="OutputTopicTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ktable-join" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ktable-left-join" />
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (3)">
+    <configuration name="OutputTopicTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ktable-foreign-key-left-join" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -201,8 +180,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ktable-left-join" />
+    <configuration name="OutputTopicTest.testTopologyLogic (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ktable-foreign-key-join" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ktable-foreign-key-left-join" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -462,6 +457,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (42)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ktable-foreign-key-join" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (43)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ktable-foreign-key-left-join" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (44)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ktable-foreign-key-outer-join" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (4)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-branching-output-topics" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -541,11 +557,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
+        <item itemvalue="JUnit.OutputTopicTest (1)" />
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicTest" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
-        <item itemvalue="JUnit.OutputTopicTest (3)" />
-        <item itemvalue="JUnit.OutputTopicTest (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -795,7 +811,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729826173855</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Table join, left-join, and outer-join with examples that distinguishes them from each other.">
+      <option name="closed" value="true" />
+      <created>1729830981994</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1729830981994</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -813,7 +837,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="KStream Filter Example" />
     <MESSAGE value="KStream Inverse Filter Example" />
     <MESSAGE value="Flat map duplicating messages example with explicit deserializer due to flat maps ability to change the key and val type" />
     <MESSAGE value="Flat map example was supposed to be a tri-split" />
@@ -838,7 +861,8 @@
     <MESSAGE value="Tumbling reduce, sliding reduce, and inactivity gap reduce examples added" />
     <MESSAGE value="Left join with example that distinguishes it from join implemented and added." />
     <MESSAGE value="Outer join with example that distinguishes it from join implemented and added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Outer join with example that distinguishes it from join implemented and added." />
+    <MESSAGE value="Table join, left-join, and outer-join with examples that distinguishes them from each other." />
+    <option name="LAST_COMMIT_MESSAGE" value="Table join, left-join, and outer-join with examples that distinguishes them from each other." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CBOE_MockUp$OutputTopicTest_testTopologyLogic__1_.ic" NAME="OutputTopicTest.testTopologyLogic (1) Coverage Results" MODIFIED="1729650602598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
