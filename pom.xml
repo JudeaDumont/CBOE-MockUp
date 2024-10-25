@@ -18,6 +18,7 @@
         <module>experimental/kstream-tumbling-aggregate</module>
         <module>experimental/kstream-join</module>
         <module>experimental/kstream-left-join</module>
+        <module>experimental/kstream-outer-join</module>
         <module>experimental/kstream-tumbling-aggregate-letter-count</module>
         <module>experimental/kstream-sliding-window</module>
         <module>experimental/kstream-map-output-topic</module>
