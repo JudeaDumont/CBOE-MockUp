@@ -39,6 +39,9 @@
     <file url="file://$PROJECT_DIR$/experimental/kstream-tumbling-aggregate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-tumbling-count/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/ktable-join/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/ktable-left-join/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/ktable-outer-join/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/index-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/index-producer/src/main/java" charset="UTF-8" />

@@ -4,14 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Left join with example that distinguishes it from join implemented and added.">
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-outer-join/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-outer-join/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-outer-join/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-outer-join/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-outer-join/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-outer-join/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-outer-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Outer join with example that distinguishes it from join implemented and added.">
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-left-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/ktable-outer-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -68,6 +82,8 @@
     "JUnit.OutputTopicNoSuppressTest.testTopologyLogic (1).executor": "Debug",
     "JUnit.OutputTopicNoSuppressTest.testTopologyLogic.executor": "Debug",
     "JUnit.OutputTopicTest (1).executor": "Debug",
+    "JUnit.OutputTopicTest (2).executor": "Debug",
+    "JUnit.OutputTopicTest (3).executor": "Debug",
     "JUnit.OutputTopicTest.executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic (1).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic (2).executor": "Debug",
@@ -123,9 +139,24 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest (1)">
-    <configuration name="OutputTopicTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-outer-join" />
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (1)">
+    <configuration name="OutputTopicTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ktable-join" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ktable-left-join" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -140,7 +171,7 @@
       </method>
     </configuration>
     <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-left-join" />
+      <module name="ktable-outer-join" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -155,23 +186,7 @@
       </method>
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-left-join" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-join" />
+      <module name="ktable-outer-join" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -187,7 +202,7 @@
       </method>
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-merge" />
+      <module name="ktable-left-join" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -419,8 +434,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (39)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ktable-join" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-to-websocket-and-output-topic-separate" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (40)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ktable-left-join" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (41)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ktable-outer-join" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -505,11 +541,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OutputTopicTest (1)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (4)" />
         <item itemvalue="JUnit.OutputTopicTest" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
+        <item itemvalue="JUnit.OutputTopicTest (3)" />
+        <item itemvalue="JUnit.OutputTopicTest (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -751,7 +787,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729729441062</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Outer join with example that distinguishes it from join implemented and added.">
+      <option name="closed" value="true" />
+      <created>1729826173855</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1729826173855</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -769,7 +813,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finished examples of both suppressed and non suppressed examples of branching output topics. &#10;&#10;the single output topic example will emit intermdeiate results if not suppressed. and the branching output topic will only emit results if you send a second batch of messages with an advanced timestamp." />
     <MESSAGE value="KStream Filter Example" />
     <MESSAGE value="KStream Inverse Filter Example" />
     <MESSAGE value="Flat map duplicating messages example with explicit deserializer due to flat maps ability to change the key and val type" />
@@ -794,7 +837,8 @@
     <MESSAGE value="not sure what happened to te sldiing window example but it is back now." />
     <MESSAGE value="Tumbling reduce, sliding reduce, and inactivity gap reduce examples added" />
     <MESSAGE value="Left join with example that distinguishes it from join implemented and added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Left join with example that distinguishes it from join implemented and added." />
+    <MESSAGE value="Outer join with example that distinguishes it from join implemented and added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Outer join with example that distinguishes it from join implemented and added." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CBOE_MockUp$OutputTopicTest_testTopologyLogic__1_.ic" NAME="OutputTopicTest.testTopologyLogic (1) Coverage Results" MODIFIED="1729650602598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

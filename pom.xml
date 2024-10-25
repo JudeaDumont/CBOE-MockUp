@@ -17,6 +17,9 @@
         <module>experimental/kgroupedstream-cogroup</module>
         <module>experimental/kstream-tumbling-aggregate</module>
         <module>experimental/kstream-join</module>
+        <module>experimental/ktable-join</module>
+        <module>experimental/ktable-left-join</module>
+        <module>experimental/ktable-outer-join</module>
         <module>experimental/kstream-left-join</module>
         <module>experimental/kstream-outer-join</module>
         <module>experimental/kstream-tumbling-aggregate-letter-count</module>
