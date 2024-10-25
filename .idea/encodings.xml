@@ -43,6 +43,8 @@
     <file url="file://$PROJECT_DIR$/experimental/ktable-foreign-key-left-join/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/ktable-foreign-key-outer-join/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/ktable-join/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/ktable-kstream-join/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/ktable-kstream-left-join/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/ktable-left-join/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/ktable-outer-join/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/ktable-output-topic-grouped-by-key-no-supress/src/main/java" charset="UTF-8" />

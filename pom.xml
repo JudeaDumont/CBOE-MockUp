@@ -21,6 +21,8 @@
         <module>experimental/ktable-foreign-key-left-join</module>
         <module>experimental/ktable-foreign-key-join</module>
         <module>experimental/ktable-left-join</module>
+        <module>experimental/ktable-kstream-join</module>
+        <module>experimental/ktable-kstream-left-join</module>
         <module>experimental/ktable-outer-join</module>
         <module>experimental/kstream-left-join</module>
         <module>experimental/kstream-outer-join</module>
