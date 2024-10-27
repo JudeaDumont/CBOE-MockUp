@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/experimental/global-ktable-kstream-join/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kgroupedstream-cogroup/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-branching-output-topics-suppressed/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-branching-output-topics/src/main/java" charset="UTF-8" />
@@ -26,6 +27,10 @@
     <file url="file://$PROJECT_DIR$/experimental/kstream-repartition-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-select-key-change-type-output-topic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-select-key-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-session-aggregate-strange-replace-results/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-session-aggregate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-session-count/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-session-reduce/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-sliding-count/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-sliding-reduce/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-sliding-window/src/main/java" charset="UTF-8" />

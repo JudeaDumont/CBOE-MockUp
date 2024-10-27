@@ -4,22 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Foreign Key Join Examples Demonstrated that distinguish them from other types of joins.">
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-join/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-join/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-join/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-join/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-join/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-join/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-left-join/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-left-join/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-left-join/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-left-join/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-left-join/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-left-join/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/ktable-kstream-left-join/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Kstream to ktable join and left join">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/kstream-session-reduce/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/kstream-session-reduce/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/kstream-session-reduce/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/kstream-session-reduce/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/kstream-session-reduce/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/kstream-session-reduce/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-select-key-output-topic/kstream-session-reduce/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate-strange-replace-results/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate-strange-replace-results/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate-strange-replace-results/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate-strange-replace-results/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate-strange-replace-results/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate-strange-replace-results/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate-strange-replace-results/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-aggregate/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-count/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-count/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-count/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-count/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-count/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-count/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-count/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-reduce/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-reduce/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-reduce/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-reduce/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-reduce/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-reduce/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-session-reduce/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -120,6 +142,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dumon\IdeaProjects\CBOE-MockUp\experimental" />
+      <recent name="C:\Users\dumon\IdeaProjects\CBOE-MockUp\experimental\kstream-select-key-output-topic" />
       <recent name="C:\dev\repos\mine\CBOE-MockUp\experimental" />
     </key>
   </component>
@@ -132,9 +155,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest">
-    <configuration name="OutputTopicTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ktable-foreign-key-left-join" />
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (3)">
+    <configuration name="OutputTopicTest (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-session-count" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -149,7 +172,7 @@
       </method>
     </configuration>
     <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ktable-kstream-left-join" />
+      <module name="kstream-session-aggregate" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -163,8 +186,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ktable-foreign-key-join" />
+    <configuration name="OutputTopicTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-session-aggregate" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -180,7 +203,7 @@
       </method>
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ktable-foreign-key-left-join" />
+      <module name="kstream-session-aggregate-strange-replace-results" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -196,7 +219,7 @@
       </method>
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ktable-kstream-join" />
+      <module name="kstream-session-count" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -484,6 +507,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (46)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-session-count" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (47)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-session-aggregate" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (48)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-session-reduce" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (49)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-session-aggregate-strange-replace-results" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (4)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-branching-output-topics" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -563,11 +614,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicTest" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
-        <item itemvalue="JUnit.OutputTopicTest (1)" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
+        <item itemvalue="JUnit.OutputTopicTest (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -833,7 +884,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729833132670</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Kstream to ktable join and left join">
+      <option name="closed" value="true" />
+      <created>1729833755320</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1729833755320</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -851,7 +910,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Flat map duplicating messages example with explicit deserializer due to flat maps ability to change the key and val type" />
     <MESSAGE value="Flat map example was supposed to be a tri-split" />
     <MESSAGE value="Removed the readme docs since I do not really make any use of them, and instead I make use of a devlog kept in google docs that I may add later, though it includes much more overarching ideas liek infrastructure using terraform and GCP. &#10;&#10;Included is an example of using flatMapValues to branch 0 one or more records per record into a single topic without repartitioning data, which is a big deal for debuggability, maintainability, and performance, wince that may mean needing to create more partitions etc. Instead, since flatmapvalues only handles the values, the key comes in the same, and only more messages with different values are created and returned for further pipeline processing." />
     <MESSAGE value="Example of terminal stream processor (forEach) which returns void, and in this case publishes to a websocket rather than an output topic." />
@@ -876,7 +934,8 @@
     <MESSAGE value="Outer join with example that distinguishes it from join implemented and added." />
     <MESSAGE value="Table join, left-join, and outer-join with examples that distinguishes them from each other." />
     <MESSAGE value="Foreign Key Join Examples Demonstrated that distinguish them from other types of joins." />
-    <option name="LAST_COMMIT_MESSAGE" value="Foreign Key Join Examples Demonstrated that distinguish them from other types of joins." />
+    <MESSAGE value="Kstream to ktable join and left join" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kstream to ktable join and left join" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CBOE_MockUp$OutputTopicTest_testTopologyLogic__1_.ic" NAME="OutputTopicTest.testTopologyLogic (1) Coverage Results" MODIFIED="1729650602598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
