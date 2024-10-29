@@ -16,6 +16,7 @@
         <module>services/index-consumer</module>
         <module>experimental/kgroupedstream-cogroup</module>
         <module>experimental/kstream-tumbling-aggregate</module>
+        <module>experimental/kstream-branching-group-by-various-suppressed-various</module>
         <module>experimental/kstream-join</module>
         <module>experimental/kstream-branching-group-by-various-suppressed</module>
         <module>experimental/kstream-sliding-count-process</module>
