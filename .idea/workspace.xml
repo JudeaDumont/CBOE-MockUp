@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Session window examples with count, aggregate, and reduce. namely an exmaple with aggregate that makes use of a session merge function, with some interesting results noted if you try and replace the leftVal with * in the rightVal.">
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count-process/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count-process/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count-process/src/main/java/com/example/KafkaProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count-process/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count-process/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count-process/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count-process/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-sliding-count-process/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Example of using a custom processor.">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-branching-group-by-various-suppressed/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-branching-group-by-various-suppressed/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-branching-group-by-various-suppressed/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-branching-group-by-various-suppressed/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-branching-group-by-various-suppressed/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-branching-group-by-various-suppressed/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-branching-group-by-various-suppressed/src/test/java/com/example/BranchingTopicsSuppressedTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -63,6 +63,7 @@
     "JUnit.ApplicationTests (1).executor": "Debug",
     "JUnit.ApplicationTests.executor": "Debug",
     "JUnit.ApplicationTests.testTopologyLogic.executor": "Debug",
+    "JUnit.BranchingTopicsSuppressedTests.executor": "Debug",
     "JUnit.BranchingTopicsSuppressedTests.testTopologyLogic.executor": "Debug",
     "JUnit.BranchingTopicsTests.executor": "Debug",
     "JUnit.OutputTopicNoSuppressTest.executor": "Debug",
@@ -97,7 +98,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dumon/IdeaProjects/CBOE-MockUp/experimental/kstream-sliding-count-process/src/main/java/com/example",
+    "last_opened_file_path": "C:/Users/dumon/IdeaProjects/CBOE-MockUp/experimental",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,10 +114,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dumon\IdeaProjects\CBOE-MockUp\experimental\kstream-sliding-count-process\src\main\java\com\example" />
       <recent name="C:\Users\dumon\IdeaProjects\CBOE-MockUp\experimental" />
+      <recent name="C:\Users\dumon\IdeaProjects\CBOE-MockUp\experimental\kstream-sliding-count-process\src\main\java\com\example" />
       <recent name="C:\Users\dumon\IdeaProjects\CBOE-MockUp\experimental\kstream-select-key-output-topic" />
       <recent name="C:\dev\repos\mine\CBOE-MockUp\experimental" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -128,9 +132,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (1)">
-    <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-session-aggregate" />
+  <component name="RunManager" selected="JUnit.BranchingTopicsSuppressedTests">
+    <configuration name="BranchingTopicsSuppressedTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-branching-group-by-various-suppressed" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -138,14 +142,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.BranchingTopicsSuppressedTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-session-count" />
+    <configuration name="BranchingTopicsSuppressedTests.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-branching-group-by-various-suppressed" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -153,8 +157,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.example.BranchingTopicsSuppressedTests" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -538,6 +543,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (51)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-branching-group-by-various-suppressed" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (5)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-branching-output-topics-suppressed" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -610,11 +622,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BranchingTopicsSuppressedTests" />
+        <item itemvalue="JUnit.BranchingTopicsSuppressedTests.testTopologyLogic" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
-        <item itemvalue="JUnit.OutputTopicTest" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
       </list>
     </recent_temporary>
   </component>
@@ -896,7 +908,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730024154903</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Example of using a custom processor.">
+      <option name="closed" value="true" />
+      <created>1730085422992</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1730085422992</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -914,7 +934,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed the readme docs since I do not really make any use of them, and instead I make use of a devlog kept in google docs that I may add later, though it includes much more overarching ideas liek infrastructure using terraform and GCP. &#10;&#10;Included is an example of using flatMapValues to branch 0 one or more records per record into a single topic without repartitioning data, which is a big deal for debuggability, maintainability, and performance, wince that may mean needing to create more partitions etc. Instead, since flatmapvalues only handles the values, the key comes in the same, and only more messages with different values are created and returned for further pipeline processing." />
     <MESSAGE value="Example of terminal stream processor (forEach) which returns void, and in this case publishes to a websocket rather than an output topic." />
     <MESSAGE value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key." />
     <MESSAGE value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module." />
@@ -939,7 +958,8 @@
     <MESSAGE value="Foreign Key Join Examples Demonstrated that distinguish them from other types of joins." />
     <MESSAGE value="Kstream to ktable join and left join" />
     <MESSAGE value="Session window examples with count, aggregate, and reduce. namely an exmaple with aggregate that makes use of a session merge function, with some interesting results noted if you try and replace the leftVal with * in the rightVal." />
-    <option name="LAST_COMMIT_MESSAGE" value="Session window examples with count, aggregate, and reduce. namely an exmaple with aggregate that makes use of a session merge function, with some interesting results noted if you try and replace the leftVal with * in the rightVal." />
+    <MESSAGE value="Example of using a custom processor." />
+    <option name="LAST_COMMIT_MESSAGE" value="Example of using a custom processor." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CBOE_MockUp$OutputTopicTest_testTopologyLogic__1_.ic" NAME="OutputTopicTest.testTopologyLogic (1) Coverage Results" MODIFIED="1729650602598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

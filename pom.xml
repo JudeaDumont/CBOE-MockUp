@@ -17,6 +17,7 @@
         <module>experimental/kgroupedstream-cogroup</module>
         <module>experimental/kstream-tumbling-aggregate</module>
         <module>experimental/kstream-join</module>
+        <module>experimental/kstream-branching-group-by-various-suppressed</module>
         <module>experimental/kstream-sliding-count-process</module>
         <module>experimental/kstream-session-reduce</module>
         <module>experimental/kstream-session-aggregate-strange-replace-results</module>

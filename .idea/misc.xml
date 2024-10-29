@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/experimental/global-ktable-kstream-join/pom.xml" />
+        <option value="$PROJECT_DIR$/experimental/kstream-sliding-aggregate-processor-state-store/pom.xml" />
         <option value="$PROJECT_DIR$/experimental/ktable-foreign-key-outer-join/pom.xml" />
       </set>
     </option>
