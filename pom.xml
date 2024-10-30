@@ -20,6 +20,7 @@
         <module>experimental/kstream-inactivity-gap-aggregate-session-merging</module>
         <module>experimental/kstream-inactivity-gap-aggregate-session-just-short</module>
         <module>experimental/kstream-join</module>
+        <module>experimental/kstream-hopping-count</module>
         <module>experimental/kstream-branching-group-by-various-suppressed</module>
         <module>experimental/kstream-sliding-count-process</module>
         <module>experimental/kstream-session-reduce</module>

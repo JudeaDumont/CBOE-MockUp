@@ -4,24 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Example of how supression works. It actually will not &quot;window results&quot; but instead, will simply not emit multiple messages untila  message is recieved whos timestamp is large enough to supercede the supression time. thread.sleep does not affect this at all, it is just a matter of time stamps for applicable messages, in this case messages whose keys begin with &quot;C&quot;">
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-just-short/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-just-short/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-just-short/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-just-short/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-just-short/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-just-short/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-just-short/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-merging/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-merging/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-merging/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-merging/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-merging/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-merging/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-merging/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Session merging examples that literally demonstrates the session window being a second too short to merge.">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-count/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-count/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-count/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-count/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-count/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-count/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-count/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental/kstream-branching-group-by-various-suppressed-various/src/test/java/com/example/BranchingTopicsSuppressedTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-branching-group-by-various-suppressed-various/src/test/java/com/example/BranchingTopicsSuppressedTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,9 +132,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic">
-    <configuration name="BranchingTopicsSuppressedTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-branching-group-by-various-suppressed" />
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (3)">
+    <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-hopping-count" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -150,14 +142,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.BranchingTopicsSuppressedTests" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BranchingTopicsSuppressedTests.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-branching-group-by-various-suppressed-various" />
+    <configuration name="OutputTopicTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-sliding-count" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -165,23 +157,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.BranchingTopicsSuppressedTests" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BranchingTopicsSuppressedTests.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-branching-group-by-various-suppressed" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.BranchingTopicsSuppressedTests" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
       <option name="METHOD_NAME" value="testTopologyLogic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -190,6 +166,22 @@
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-inactivity-gap-aggregate-session-merging" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-hopping-count" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -563,6 +555,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (55)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-hopping-count" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (5)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-branching-output-topics-suppressed" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -635,11 +634,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
+        <item itemvalue="JUnit.OutputTopicTest" />
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
-        <item itemvalue="JUnit.BranchingTopicsSuppressedTests.testTopologyLogic (1)" />
-        <item itemvalue="JUnit.BranchingTopicsSuppressedTests" />
-        <item itemvalue="JUnit.BranchingTopicsSuppressedTests.testTopologyLogic" />
       </list>
     </recent_temporary>
   </component>
@@ -945,7 +944,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730243203216</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Session merging examples that literally demonstrates the session window being a second too short to merge.">
+      <option name="closed" value="true" />
+      <created>1730263064709</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1730263064709</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -963,7 +970,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="The existing kstream output topic experiment uses a grouped by and a count to demonstrate sending messages downstream that are counts of messages with a particular key. Also, there is no supress method on regular kstreams, so I removed the outputtopic-supressed module." />
     <MESSAGE value="Optimize imports" />
     <MESSAGE value="Group By Example that changes the type of the key and aggregates the value of two messages together" />
     <MESSAGE value="KGroupedTable Aggregate with subtractor and a groupby on a ktable example. No idea why the subtraction aggregator is necessary, but will answer that question later." />
@@ -988,10 +994,11 @@
     <MESSAGE value="Example of using a custom processor." />
     <MESSAGE value="Example of different group bys" />
     <MESSAGE value="Example of how supression works. It actually will not &quot;window results&quot; but instead, will simply not emit multiple messages untila  message is recieved whos timestamp is large enough to supercede the supression time. thread.sleep does not affect this at all, it is just a matter of time stamps for applicable messages, in this case messages whose keys begin with &quot;C&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Example of how supression works. It actually will not &quot;window results&quot; but instead, will simply not emit multiple messages untila  message is recieved whos timestamp is large enough to supercede the supression time. thread.sleep does not affect this at all, it is just a matter of time stamps for applicable messages, in this case messages whose keys begin with &quot;C&quot;" />
+    <MESSAGE value="Session merging examples that literally demonstrates the session window being a second too short to merge." />
+    <option name="LAST_COMMIT_MESSAGE" value="Session merging examples that literally demonstrates the session window being a second too short to merge." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CBOE_MockUp$OutputTopicTest_testTopologyLogic__1_.ic" NAME="OutputTopicTest.testTopologyLogic (1) Coverage Results" MODIFIED="1729650602598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/CBOE_MockUp$OutputTopicTest_testTopologyLogic__1_.ic" NAME="OutputTopicTest.testTopologyLogic (1) Coverage Results" MODIFIED="1730263829894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.example.*</FILTER>
     </SUITE>
   </component>
