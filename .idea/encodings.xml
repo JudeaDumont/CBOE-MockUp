@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/experimental/kstream-flat-map-tri-split/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-flat-map-value-only-tri-split/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-grouped-by-changes-key-output-topic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-just-short/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate-session-merging/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-inactivity-gap-aggregate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-inactivity-gap-count/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-inactivity-gap-reduce/src/main/java" charset="UTF-8" />

@@ -74,7 +74,6 @@ public class BranchingTopicsSuppressedTests {
 
 	@Test
 	public void testTopologyLogic() throws InterruptedException {
-
 		inputTopic.pipeInput("C-msg", "test-C", 1L);
 		inputTopic.pipeInput("B-msg", "test-B", 10L);
 		inputTopic.pipeInput("A-msg", "test-A", 20L);
