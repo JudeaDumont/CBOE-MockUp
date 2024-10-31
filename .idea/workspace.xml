@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Hopping window example with multiple windows worth of messages demonstrated. One important nots is that the advnace time must be less than the window size!">
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-reduce/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-reduce/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-reduce/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-reduce/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-reduce/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-reduce/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experimental/kstream-hopping-reduce/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Hopping reduce added, which is all 3 types of functions i intended to demonstrate, count, reduce, aggregate.">
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count-thorough/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count-thorough/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count-thorough/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count-thorough/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count-thorough/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count-thorough/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count-thorough/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/kstream-tumbling-count/src/test/java/com/example/OutputTopicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/experimental/kstream-tumbling-count/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +132,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic">
+  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (3)">
     <configuration name="OutputTopicTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-hopping-reduce" />
       <extension name="coverage">
@@ -144,6 +144,22 @@
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-tumbling-count" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,23 +181,7 @@
       </method>
     </configuration>
     <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-hopping-count" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-hopping-aggregate" />
+      <module name="kstream-tumbling-count-thorough" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -583,6 +583,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (59)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-tumbling-count-thorough" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (5)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-branching-output-topics-suppressed" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -655,11 +662,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
+        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
         <item itemvalue="JUnit.OutputTopicTest (1)" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (2)" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (4)" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -981,7 +988,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730265557213</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Hopping reduce added, which is all 3 types of functions i intended to demonstrate, count, reduce, aggregate.">
+      <option name="closed" value="true" />
+      <created>1730351344591</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1730351344591</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -999,7 +1014,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Group By Example that changes the type of the key and aggregates the value of two messages together" />
     <MESSAGE value="KGroupedTable Aggregate with subtractor and a groupby on a ktable example. No idea why the subtraction aggregator is necessary, but will answer that question later." />
     <MESSAGE value="Cogroup example with two KGroupedStreams" />
     <MESSAGE value="Mapping example with kstream implemented, this one requires explicit setting of the serializers meaning that map can change the key and or value fi you wish." />
@@ -1024,7 +1038,8 @@
     <MESSAGE value="Example of how supression works. It actually will not &quot;window results&quot; but instead, will simply not emit multiple messages untila  message is recieved whos timestamp is large enough to supercede the supression time. thread.sleep does not affect this at all, it is just a matter of time stamps for applicable messages, in this case messages whose keys begin with &quot;C&quot;" />
     <MESSAGE value="Session merging examples that literally demonstrates the session window being a second too short to merge." />
     <MESSAGE value="Hopping window example with multiple windows worth of messages demonstrated. One important nots is that the advnace time must be less than the window size!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hopping window example with multiple windows worth of messages demonstrated. One important nots is that the advnace time must be less than the window size!" />
+    <MESSAGE value="Hopping reduce added, which is all 3 types of functions i intended to demonstrate, count, reduce, aggregate." />
+    <option name="LAST_COMMIT_MESSAGE" value="Hopping reduce added, which is all 3 types of functions i intended to demonstrate, count, reduce, aggregate." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CBOE_MockUp$OutputTopicTest_testTopologyLogic__1_.ic" NAME="OutputTopicTest.testTopologyLogic (1) Coverage Results" MODIFIED="1730263829894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

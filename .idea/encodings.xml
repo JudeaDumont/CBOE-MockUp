@@ -52,6 +52,7 @@
     <file url="file://$PROJECT_DIR$/experimental/kstream-to-websocket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-tumbling-aggregate-letter-count/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-tumbling-aggregate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/experimental/kstream-tumbling-count-thorough/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-tumbling-count/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/kstream-tumbling-reduce/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/ktable-foreign-key-join/src/main/java" charset="UTF-8" />
