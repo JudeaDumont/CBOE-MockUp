@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="More thorough test for tumbling count with multiple windows worth of messages">
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/main/java/com/example/Model/GeneratePermutations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/main/java/com/example/Serde/ListDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/main/java/com/example/Serde/ListSerde.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/main/java/com/example/Serde/ListSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Generate permutations example where a flat map operation takes all permutations of numbers up to x, and pushes each permutation into a message downstream.">
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/main/java/com/example/Model/GeneratePermutationsChecks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/main/java/com/example/Serde/ListDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/main/java/com/example/Serde/ListSerde.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/main/java/com/example/Serde/ListSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/test/java/com/example/DuplicatedIndexesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/test/java/com/example/DuplicatedIndexesTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/test/java/com/example/NoDuplicatesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -77,6 +80,11 @@
     "JUnit.BranchingTopicsSuppressedTests.testTopologyLogic (1).executor": "Debug",
     "JUnit.BranchingTopicsSuppressedTests.testTopologyLogic.executor": "Debug",
     "JUnit.BranchingTopicsTests.executor": "Debug",
+    "JUnit.DuplicatedIndexesTest.executor": "Debug",
+    "JUnit.DuplicatedIndexesTest.testTopologyLogic.executor": "Debug",
+    "JUnit.DuplicatedIndexesTest2.testTopologyLogic.executor": "Debug",
+    "JUnit.NoDuplicatesTest.executor": "Debug",
+    "JUnit.NoDuplicatesTest.testTopologyLogic.executor": "Debug",
     "JUnit.OutputTopicNoSuppressTest.executor": "Debug",
     "JUnit.OutputTopicNoSuppressTest.testTopologyLogic (1).executor": "Debug",
     "JUnit.OutputTopicNoSuppressTest.testTopologyLogic.executor": "Debug",
@@ -149,9 +157,71 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic (4)">
-    <configuration name="OutputTopicTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-hopping-reduce" />
+  <component name="RunManager" selected="JUnit.OutputTopicTest">
+    <configuration name="DuplicatedIndexesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-check-string-permutations" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.DuplicatedIndexesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DuplicatedIndexesTest2.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-check-string-permutations" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.DuplicatedIndexesTest2" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DuplicatedIndexesTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-check-string-permutations" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.DuplicatedIndexesTest" />
+      <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoDuplicatesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-check-string-permutations" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.NoDuplicatesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-check-string-permutations" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -161,70 +231,6 @@
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-tumbling-count" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-tumbling-count-thorough" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-permutations-up-to-x" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-hopping-reduce" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -621,6 +627,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (61)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kstream-check-string-permutations" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (6)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-branching-output-topics-suppressed" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -686,11 +699,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (4)" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (3)" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic (1)" />
-        <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
-        <item itemvalue="JUnit.OutputTopicTest (1)" />
+        <item itemvalue="JUnit.OutputTopicTest" />
+        <item itemvalue="JUnit.NoDuplicatesTest" />
+        <item itemvalue="JUnit.DuplicatedIndexesTest" />
+        <item itemvalue="JUnit.DuplicatedIndexesTest2.testTopologyLogic" />
+        <item itemvalue="JUnit.DuplicatedIndexesTest.testTopologyLogic" />
       </list>
     </recent_temporary>
   </component>
@@ -1028,7 +1041,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730352297196</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Generate permutations example where a flat map operation takes all permutations of numbers up to x, and pushes each permutation into a message downstream.">
+      <option name="closed" value="true" />
+      <created>1730508791380</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1730508791380</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1046,7 +1067,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cogroup example with two KGroupedStreams" />
     <MESSAGE value="Mapping example with kstream implemented, this one requires explicit setting of the serializers meaning that map can change the key and or value fi you wish." />
     <MESSAGE value="Mapping example where the key and value types change, another example with mapValues that just changes the value type." />
     <MESSAGE value="Merge example with 2 kstreams" />
@@ -1071,7 +1091,8 @@
     <MESSAGE value="Hopping window example with multiple windows worth of messages demonstrated. One important nots is that the advnace time must be less than the window size!" />
     <MESSAGE value="Hopping reduce added, which is all 3 types of functions i intended to demonstrate, count, reduce, aggregate." />
     <MESSAGE value="More thorough test for tumbling count with multiple windows worth of messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="More thorough test for tumbling count with multiple windows worth of messages" />
+    <MESSAGE value="Generate permutations example where a flat map operation takes all permutations of numbers up to x, and pushes each permutation into a message downstream." />
+    <option name="LAST_COMMIT_MESSAGE" value="Generate permutations example where a flat map operation takes all permutations of numbers up to x, and pushes each permutation into a message downstream." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CBOE_MockUp$OutputTopicTest_testTopologyLogic__1_.ic" NAME="OutputTopicTest.testTopologyLogic (1) Coverage Results" MODIFIED="1730263829894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

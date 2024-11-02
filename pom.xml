@@ -39,6 +39,7 @@
         <module>experimental/kstream-left-join</module>
         <module>experimental/kstream-outer-join</module>
         <module>algorithmic-experiments/kstream-permutations-up-to-x</module>
+        <module>algorithmic-experiments/kstream-check-string-permutations</module>
         <module>experimental/kstream-hopping-reduce</module>
         <module>experimental/kstream-tumbling-count-thorough</module>
         <module>experimental/kstream-tumbling-aggregate-letter-count</module>
