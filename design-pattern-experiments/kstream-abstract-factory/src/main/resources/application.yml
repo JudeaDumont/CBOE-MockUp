@@ -1,0 +1,9 @@
+logging:
+  level.root: info
+input-topic:
+  name: input
+output-topic:
+  name: output
+product:
+  factory:
+    type: A

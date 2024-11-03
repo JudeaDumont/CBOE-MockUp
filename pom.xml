@@ -37,6 +37,7 @@
         <module>experimental/ktable-kstream-left-join</module>
         <module>experimental/ktable-outer-join</module>
         <module>experimental/kstream-left-join</module>
+        <module>design-pattern-experiments/kstream-abstract-factory</module>
         <module>experimental/kstream-outer-join</module>
         <module>algorithmic-experiments/kstream-permutations-up-to-x</module>
         <module>algorithmic-experiments/kstream-check-string-permutations</module>
