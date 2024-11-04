@@ -4,32 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Generate permutations example where a flat map operation takes all permutations of numbers up to x, and pushes each permutation into a message downstream.&#10;&#10;Another example that does some permutations checks with aggregates of strings(val) being contained within a string(key)">
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/Topology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/model/buttons/ClassAProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/model/buttons/ClassBProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/model/buttons/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/model/checkboxes/ClassAOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/model/checkboxes/ClassBOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/model/checkboxes/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/model/factories/ClassAFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/model/factories/ClassBFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/model/factories/POFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java/com/example/model/factoryconfig/ProductFactoryConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Example of an abstract factory pattern being used to modify messages in the kafka streams topology.">
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confluent-cloud-experiments/confluent-cloud-client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confluent-cloud-experiments/confluent-cloud-client/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confluent-cloud-experiments/confluent-cloud-client/src/main/java/com/example/ClientExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confluent-cloud-experiments/confluent-cloud-client/src/main/resources/client.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/confluent-cloud-experiments/confluent-cloud-client">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,6 +76,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.confluent-cloud-client [:ClientExample.main()].executor": "Debug",
     "JUnit.All in index-consumer.executor": "Debug",
     "JUnit.All in index-producer.executor": "Debug",
     "JUnit.All in kstream-tumbling-aggregate.executor": "Debug",
@@ -118,9 +124,11 @@
     "JUnit.java in kstream-to-websocket-with-terminal-foreach.executor": "Debug",
     "JUnit.java in kstream-to-websocket.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/dev/repos/mine/CBOE-MockUp/design-pattern-experiments",
+    "last_opened_file_path": "C:/dev/repos/mine/CBOE-MockUp/confluent-cloud-experiments",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -141,11 +149,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\repos\mine\CBOE-MockUp\confluent-cloud-experiments" />
       <recent name="C:\dev\repos\mine\CBOE-MockUp\design-pattern-experiments" />
       <recent name="C:\dev\repos\mine\CBOE-MockUp\algorithmic-experiments" />
       <recent name="C:\dev\repos\mine\CBOE-MockUp\experimental" />
       <recent name="C:\Users\dumon\IdeaProjects\CBOE-MockUp\experimental" />
-      <recent name="C:\Users\dumon\IdeaProjects\CBOE-MockUp\experimental\kstream-sliding-count-process\src\main\java\com\example" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example" />
@@ -160,7 +168,20 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OutputTopicTest.testTopologyLogic">
+  <component name="RunManager" selected="Application.ClientExample">
+    <configuration name="ClientExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.ClientExample" />
+      <module name="confluent-cloud-client.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DuplicatedIndexesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kstream-check-string-permutations" />
       <extension name="coverage">
@@ -172,22 +193,6 @@
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.DuplicatedIndexesTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DuplicatedIndexesTest2.testTopologyLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-check-string-permutations" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.DuplicatedIndexesTest2" />
-      <option name="METHOD_NAME" value="testTopologyLogic" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -644,6 +649,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (63)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="confluent-cloud-client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (6)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="kstream-branching-output-topics-suppressed" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -709,11 +721,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ClientExample" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
         <item itemvalue="JUnit.OutputTopicTest" />
         <item itemvalue="JUnit.NoDuplicatesTest" />
         <item itemvalue="JUnit.DuplicatedIndexesTest" />
-        <item itemvalue="JUnit.DuplicatedIndexesTest2.testTopologyLogic" />
       </list>
     </recent_temporary>
   </component>
@@ -1067,7 +1079,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730513101724</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Example of an abstract factory pattern being used to modify messages in the kafka streams topology.">
+      <option name="closed" value="true" />
+      <created>1730664862157</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1730664862157</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1085,7 +1105,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mapping example where the key and value types change, another example with mapValues that just changes the value type." />
     <MESSAGE value="Merge example with 2 kstreams" />
     <MESSAGE value="Example where an input topic splits and sends messages to botha  websocket and an output topic, and it uses peek to send to the websocket as a &quot;side effect&quot;" />
     <MESSAGE value="select key example finished, I have done similar examples with group by and with map where I can change the key, or even change the type of the key." />
@@ -1110,7 +1129,8 @@
     <MESSAGE value="More thorough test for tumbling count with multiple windows worth of messages" />
     <MESSAGE value="Generate permutations example where a flat map operation takes all permutations of numbers up to x, and pushes each permutation into a message downstream." />
     <MESSAGE value="Generate permutations example where a flat map operation takes all permutations of numbers up to x, and pushes each permutation into a message downstream.&#10;&#10;Another example that does some permutations checks with aggregates of strings(val) being contained within a string(key)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generate permutations example where a flat map operation takes all permutations of numbers up to x, and pushes each permutation into a message downstream.&#10;&#10;Another example that does some permutations checks with aggregates of strings(val) being contained within a string(key)" />
+    <MESSAGE value="Example of an abstract factory pattern being used to modify messages in the kafka streams topology." />
+    <option name="LAST_COMMIT_MESSAGE" value="Example of an abstract factory pattern being used to modify messages in the kafka streams topology." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CBOE_MockUp$OutputTopicTest_testTopologyLogic__1_.ic" NAME="OutputTopicTest.testTopologyLogic (1) Coverage Results" MODIFIED="1730263829894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
