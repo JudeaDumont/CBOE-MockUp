@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Example of an abstract factory pattern being used to modify messages in the kafka streams topology.">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confluent-cloud-experiments/confluent-cloud-client/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confluent-cloud-experiments/confluent-cloud-client/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confluent-cloud-experiments/confluent-cloud-client/src/main/java/com/example/ClientExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confluent-cloud-experiments/confluent-cloud-client/src/main/resources/client.properties" afterDir="false" />
+    <list default="true" id="b96cca5c-b47a-4af2-a4f1-450c9057d079" name="Changes" comment="Confluent Cloud client (pretty much without spring). But it works and shows up in confluent cloud.">
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/main/java/com/example/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/main/java/com/example/Model/PrefixCloud.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/main/java/com/example/Serde/ListDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/main/java/com/example/Serde/ListSerde.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/main/java/com/example/Serde/ListSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/main/java/com/example/Topology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/test/java/com/example/OutputTopicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/test/java/com/example/PrefixCloudTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +114,9 @@
     "JUnit.OutputTopicTest.testTopologyLogic (4).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic (5).executor": "Debug",
     "JUnit.OutputTopicTest.testTopologyLogic.executor": "Debug",
+    "JUnit.PrefixCloudTest.testPrefixCloudTest.executor": "Debug",
+    "JUnit.PrefixCloudTest.testPrefixCloudTest2.executor": "Debug",
+    "JUnit.PrefixCloudTest.testPrefixCloudTest3.executor": "Debug",
     "JUnit.SeparateWebSocketAndOutputTopicConfigTest.executor": "Debug",
     "JUnit.WebSocketAndOutputTopicTest.executor": "Debug",
     "JUnit.WebSocketTest.executor": "Debug",
@@ -128,7 +138,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/dev/repos/mine/CBOE-MockUp/confluent-cloud-experiments",
+    "last_opened_file_path": "C:/dev/repos/mine/CBOE-MockUp/algorithmic-experiments",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -149,9 +159,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\repos\mine\CBOE-MockUp\algorithmic-experiments" />
       <recent name="C:\dev\repos\mine\CBOE-MockUp\confluent-cloud-experiments" />
       <recent name="C:\dev\repos\mine\CBOE-MockUp\design-pattern-experiments" />
-      <recent name="C:\dev\repos\mine\CBOE-MockUp\algorithmic-experiments" />
       <recent name="C:\dev\repos\mine\CBOE-MockUp\experimental" />
       <recent name="C:\Users\dumon\IdeaProjects\CBOE-MockUp\experimental" />
     </key>
@@ -168,7 +178,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ClientExample">
+  <component name="RunManager" selected="JUnit.PrefixCloudTest.testPrefixCloudTest3">
     <configuration name="ClientExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.ClientExample" />
       <module name="confluent-cloud-client.main" />
@@ -178,51 +188,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DuplicatedIndexesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-check-string-permutations" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.DuplicatedIndexesTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NoDuplicatesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-check-string-permutations" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.NoDuplicatesTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OutputTopicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kstream-check-string-permutations" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -238,6 +203,54 @@
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.OutputTopicTest" />
       <option name="METHOD_NAME" value="testTopologyLogic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrefixCloudTest.testPrefixCloudTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-word-cloud-prefix-lookup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.PrefixCloudTest" />
+      <option name="METHOD_NAME" value="testPrefixCloudTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrefixCloudTest.testPrefixCloudTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-word-cloud-prefix-lookup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.PrefixCloudTest" />
+      <option name="METHOD_NAME" value="testPrefixCloudTest2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrefixCloudTest.testPrefixCloudTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kstream-word-cloud-prefix-lookup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.PrefixCloudTest" />
+      <option name="METHOD_NAME" value="testPrefixCloudTest3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -650,7 +663,7 @@
       </method>
     </configuration>
     <configuration name="Application (63)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="confluent-cloud-client" />
+      <module name="kstream-word-cloud-prefix-lookup" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -721,11 +734,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PrefixCloudTest.testPrefixCloudTest3" />
+        <item itemvalue="JUnit.PrefixCloudTest.testPrefixCloudTest2" />
+        <item itemvalue="JUnit.PrefixCloudTest.testPrefixCloudTest" />
         <item itemvalue="Application.ClientExample" />
         <item itemvalue="JUnit.OutputTopicTest.testTopologyLogic" />
-        <item itemvalue="JUnit.OutputTopicTest" />
-        <item itemvalue="JUnit.NoDuplicatesTest" />
-        <item itemvalue="JUnit.DuplicatedIndexesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1087,7 +1100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730664862157</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Confluent Cloud client (pretty much without spring). But it works and shows up in confluent cloud.">
+      <option name="closed" value="true" />
+      <created>1730698981893</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1730698981893</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1105,7 +1126,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge example with 2 kstreams" />
     <MESSAGE value="Example where an input topic splits and sends messages to botha  websocket and an output topic, and it uses peek to send to the websocket as a &quot;side effect&quot;" />
     <MESSAGE value="select key example finished, I have done similar examples with group by and with map where I can change the key, or even change the type of the key." />
     <MESSAGE value="select key example where the keys type changes" />
@@ -1130,7 +1150,8 @@
     <MESSAGE value="Generate permutations example where a flat map operation takes all permutations of numbers up to x, and pushes each permutation into a message downstream." />
     <MESSAGE value="Generate permutations example where a flat map operation takes all permutations of numbers up to x, and pushes each permutation into a message downstream.&#10;&#10;Another example that does some permutations checks with aggregates of strings(val) being contained within a string(key)" />
     <MESSAGE value="Example of an abstract factory pattern being used to modify messages in the kafka streams topology." />
-    <option name="LAST_COMMIT_MESSAGE" value="Example of an abstract factory pattern being used to modify messages in the kafka streams topology." />
+    <MESSAGE value="Confluent Cloud client (pretty much without spring). But it works and shows up in confluent cloud." />
+    <option name="LAST_COMMIT_MESSAGE" value="Confluent Cloud client (pretty much without spring). But it works and shows up in confluent cloud." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CBOE_MockUp$OutputTopicTest_testTopologyLogic__1_.ic" NAME="OutputTopicTest.testTopologyLogic (1) Coverage Results" MODIFIED="1730263829894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

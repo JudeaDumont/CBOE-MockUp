@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/algorithmic-experiments/kstream-check-string-permutations/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/algorithmic-experiments/kstream-permutations-up-to-x/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithmic-experiments/kstream-word-cloud-prefix-lookup/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/confluent-cloud-experiments/confluent-cloud-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-pattern-experiments/kstream-abstract-factory/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/experimental/global-ktable-kstream-join/src/main/java" charset="UTF-8" />
